@@ -1,24 +1,11 @@
 import type { Metadata } from "next";
-import { Manrope, Libre_Baskerville } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig, seoKeywords } from "@/lib/data";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const libre = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-libre",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -35,9 +22,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Installation Sprinkler & RIA`,
     description: siteConfig.description,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: siteConfig.name }],
+    images: [{ url: "/logo.svg", width: 220, height: 48, alt: siteConfig.name }],
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/favicon.svg" }],
+  },
 };
 
 export default function RootLayout({
@@ -46,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${manrope.variable} ${libre.variable}`}>
-      <body className="font-sans">
+    <html lang="fr" className={GeistSans.variable}>
+      <body className={`${GeistSans.className} font-sans antialiased`}>
         <JsonLd />
         <EmergencyBanner />
         <Header />

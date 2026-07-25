@@ -27,7 +27,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound();
 
   const contentHtml = post.content.trim().split("\n").map((line) => {
-    if (line.startsWith("## ")) return `<h2 class="font-display text-2xl text-navy-900 mt-10 mb-4">${line.slice(3)}</h2>`;
+    if (line.startsWith("## ")) return `<h2 class="font-sans font-bold text-2xl text-navy-900 mt-10 mb-4">${line.slice(3)}</h2>`;
     if (line.trim() === "") return "";
     return `<p class="text-sm text-navy-600 leading-relaxed mb-4">${line}</p>`;
   }).join("\n");
@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{new Date(post.date).toLocaleDateString("fr-FR")}</span>
               <span className="flex items-center gap-1"><Clock className="h-3 w-3" />{post.readTime}</span>
             </div>
-            <h1 className="font-display text-3xl md:text-4xl text-white max-w-3xl">{post.title}</h1>
+            <h1 className="font-sans font-bold text-3xl md:text-4xl text-white max-w-3xl">{post.title}</h1>
           </div>
         </div>
         <div className="section-padding">

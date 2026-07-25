@@ -3,7 +3,7 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { siteConfig, values } from "@/lib/data";
-import { images } from "@/lib/images";
+import { images, realPhotos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHeader
         title="À propos de Paris Incendie"
         subtitle="Installateur agréé APSAD — sprinkler, RIA, mise en conformité et maintenance."
-        image={images.team}
+        image={realPhotos.pumpRoomWide}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "À propos" }]}
       />
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="section-title mb-6">Notre histoire</h2>
-              <div className="space-y-4 text-navy-600 leading-relaxed text-sm">
+              <div className="space-y-4 text-navy-300 leading-relaxed text-sm">
                 <p>
                   Paris Incendie installe et maintient des systèmes de protection incendie
                   depuis {siteConfig.founded}. Reconnue par les entreprises agréées du
@@ -40,20 +40,20 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden col-span-2 sm:col-span-1">
-                <Image src={images.construction} alt="Chantier Paris Incendie" fill className="object-cover" sizes="300px" />
+                <Image src={realPhotos.pumpRoomWide} alt="Salle des pompes" fill className="object-cover" sizes="300px" />
               </div>
               <div className="relative aspect-square rounded-lg overflow-hidden">
-                <Image src={images.sprinkler} alt="Réseau sprinkler" fill className="object-cover" sizes="200px" />
+                <Image src={realPhotos.sprinklerHead} alt="Tête sprinkler" fill className="object-cover" sizes="200px" />
               </div>
               <div className="relative aspect-square rounded-lg overflow-hidden">
-                <Image src={images.pipes} alt="Tuyauterie incendie" fill className="object-cover" sizes="200px" />
+                <Image src={realPhotos.sprinklerAlarm} alt="Poste alarme sprinkler" fill className="object-cover" sizes="200px" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-navy-50 border-y border-navy-200">
+      <section className="section-padding bg-navy-900 border-y border-navy-800">
         <div className="container-custom">
           <h2 className="section-title text-center mb-12">Nos valeurs</h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -68,8 +68,8 @@ export default function AboutPage() {
                     sizes="250px"
                   />
                 </div>
-                <h3 className="font-bold text-navy-900 mb-2">{value.title}</h3>
-                <p className="text-xs text-navy-600">{value.description}</p>
+                <h3 className="font-bold text-white mb-2">{value.title}</h3>
+                <p className="text-xs text-navy-400">{value.description}</p>
               </div>
             ))}
           </div>
@@ -79,11 +79,11 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom grid lg:grid-cols-2 gap-12">
           <div className="relative aspect-video rounded-lg overflow-hidden">
-            <Image src={images.sprinklerCeiling} alt="Tête sprinkler en plafond" fill className="object-cover" sizes="600px" />
+            <Image src={realPhotos.sprinklerAction} alt="Tête sprinkler en plafond" fill className="object-cover" sizes="600px" />
           </div>
           <div>
             <h2 className="section-title mb-4">Le sprinkler, concrètement</h2>
-            <p className="text-navy-600 text-sm leading-relaxed mb-4">
+            <p className="text-navy-300 text-sm leading-relaxed mb-4">
               Système automatique à déclenchement par fusion thermique. Un réseau de
               tuyauteries sous pression alimente des têtes sprinkler qui projettent
               l&apos;eau directement sur le foyer dès la montée de température.

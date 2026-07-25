@@ -1,4 +1,4 @@
-import { images } from "@/lib/images";
+import { blogImages } from "@/lib/images";
 
 export interface BlogPost {
   slug: string;
@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-15",
     readTime: "8 min",
     category: "Prévention",
-    image: images.firefighter,
+    image: blogImages[0],
     content: `
 ## Introduction
 
@@ -79,7 +79,7 @@ La prévention est toujours moins coûteuse que la réparation. Contactez Paris 
     date: "2026-03-08",
     readTime: "10 min",
     category: "Guide",
-    image: images.fireEquipment,
+    image: blogImages[1],
     content: `
 ## Comprendre vos besoins
 
@@ -110,7 +110,7 @@ Paris Incendie réalise une étude personnalisée de vos risques pour vous recom
     date: "2026-02-28",
     readTime: "12 min",
     category: "Réglementation",
-    image: images.sprinkler,
+    image: blogImages[5],
     content: `
 ## Le cadre réglementaire français
 
@@ -141,7 +141,7 @@ Notre certification APSAD garantit que toutes nos installations respectent les r
     date: "2026-02-20",
     readTime: "9 min",
     category: "Technique",
-    image: images.ria,
+    image: blogImages[3],
     content: `
 ## Détecteurs optiques de fumée
 
@@ -172,7 +172,7 @@ Un système de détection bien conçu complète efficacement vos systèmes d'ext
     date: "2026-02-12",
     readTime: "7 min",
     category: "Maintenance",
-    image: images.maintenance,
+    image: blogImages[4],
     content: `
 ## Une obligation légale
 
@@ -199,7 +199,7 @@ Nous proposons des contrats sur-mesure incluant maintenance préventive, interve
     date: "2026-02-05",
     readTime: "11 min",
     category: "Technique",
-    image: images.fireEquipment,
+    image: blogImages[2],
     content: `
 ## Qu'est-ce qu'un système SPK ?
 
@@ -230,7 +230,7 @@ De l'étude à la maintenance, nous accompagnons vos projets sprinkler de A à Z
     date: "2026-01-28",
     readTime: "8 min",
     category: "Formation",
-    image: images.team,
+    image: blogImages[6],
     content: `
 ## L'obligation de formation
 
@@ -257,7 +257,7 @@ Désignez et formez des guides et serre-files pour encadrer l'évacuation en cas
     date: "2026-01-20",
     readTime: "9 min",
     category: "Prévention",
-    image: images.firefighter,
+    image: blogImages[7],
     content: `
 ## Avant l'incendie : la préparation
 
@@ -284,7 +284,7 @@ Ne réintégrez le bâtiment qu'après accord des pompiers et du responsable sé
     date: "2026-01-12",
     readTime: "10 min",
     category: "Technique",
-    image: images.ria,
+    image: blogImages[8],
     content: `
 ## Qu'est-ce qu'un RIA ?
 
@@ -311,7 +311,7 @@ En cas de fuite ou de dysfonctionnement, notre équipe intervient rapidement pou
     date: "2026-01-05",
     readTime: "8 min",
     category: "Réglementation",
-    image: images.sprinkler,
+    image: blogImages[9],
     content: `
 ## Pourquoi les certifications comptent
 

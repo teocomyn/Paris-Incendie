@@ -3,21 +3,23 @@ import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
 import { navigation, siteConfig } from "@/lib/data";
-import { images } from "@/lib/images";
+import { realPhotos } from "@/lib/images";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 text-navy-400">
+    <footer className="bg-navy-950 text-navy-400 border-t border-navy-800">
       {/* Photo band */}
       <div className="relative h-48 md:h-56 overflow-hidden">
-        <Image src={images.hero} alt="" fill className="object-cover opacity-30" sizes="100vw" />
-        <div className="absolute inset-0 bg-navy-950/60" />
+        <Image src={realPhotos.sprinklerAction} alt="" fill className="object-cover opacity-25" sizes="100vw" />
+        <div className="absolute inset-0 bg-navy-950/70" />
+        <div className="absolute inset-0 bg-hero-glow opacity-50" />
+        <div className="grain-overlay" />
         <div className="container-custom relative z-10 h-full flex items-center">
           <div>
-            <p className="font-display text-2xl md:text-3xl text-white">
+            <p className="font-sans text-2xl md:text-3xl text-white">
               Sécurisez vos locaux dès aujourd&apos;hui
             </p>
-            <Link href="/devis" className="inline-block mt-4 text-sm font-bold text-brand-400 hover:text-brand-300 transition-colors">
+            <Link href="/devis" className="inline-block mt-4 text-sm font-bold text-brand-500 hover:text-brand-400 transition-colors">
               Demander un devis gratuit →
             </Link>
           </div>
@@ -27,9 +29,8 @@ export default function Footer() {
       <div className="container-custom py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <Logo className="h-10 w-10" />
-              <span className="font-display text-lg text-white">Paris Incendie</span>
+            <Link href="/" className="inline-block mb-5">
+              <Logo variant="full-light" showTagline />
             </Link>
             <p className="text-sm leading-relaxed">
               Installation et maintenance sprinkler (SPK) et RIA.
@@ -42,21 +43,21 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {navigation.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white transition-colors">{item.name}</Link>
+                  <Link href={item.href} className="hover:text-brand-500 transition-colors">{item.name}</Link>
                 </li>
               ))}
-              <li><Link href="/devis" className="hover:text-white transition-colors">Devis</Link></li>
-              <li><Link href="/carrieres" className="hover:text-white transition-colors">Carrières</Link></li>
+              <li><Link href="/devis" className="hover:text-brand-500 transition-colors">Devis</Link></li>
+              <li><Link href="/carrieres" className="hover:text-brand-500 transition-colors">Carrières</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-[10px] font-bold text-white uppercase tracking-[0.2em] mb-4">Services</h3>
             <ul className="space-y-2.5 text-sm">
-              <li><Link href="/services#sprinkler" className="hover:text-white transition-colors">Sprinkler SPK</Link></li>
-              <li><Link href="/services#ria" className="hover:text-white transition-colors">RIA</Link></li>
-              <li><Link href="/services#conformite" className="hover:text-white transition-colors">Mise en conformité</Link></li>
-              <li><Link href="/services#maintenance" className="hover:text-white transition-colors">Maintenance & SAV</Link></li>
+              <li><Link href="/services#sprinkler" className="hover:text-brand-500 transition-colors">Sprinkler SPK</Link></li>
+              <li><Link href="/services#ria" className="hover:text-brand-500 transition-colors">RIA</Link></li>
+              <li><Link href="/services#conformite" className="hover:text-brand-500 transition-colors">Mise en conformité</Link></li>
+              <li><Link href="/services#maintenance" className="hover:text-brand-500 transition-colors">Maintenance & SAV</Link></li>
             </ul>
           </div>
 
@@ -76,7 +77,7 @@ export default function Footer() {
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-white">{siteConfig.email}</a>
               </li>
             </ul>
-            <p className="mt-4 text-xs font-bold text-brand-400">
+            <p className="mt-4 text-xs font-bold text-brand-500">
               Astreinte : {siteConfig.emergencyPhone}
             </p>
           </div>
@@ -87,8 +88,8 @@ export default function Footer() {
         <div className="container-custom py-5 flex flex-col sm:flex-row justify-between gap-3 text-xs">
           <p>&copy; {new Date().getFullYear()} Paris Incendie</p>
           <div className="flex gap-6">
-            <Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</Link>
-            <Link href="/politique-confidentialite" className="hover:text-white transition-colors">Confidentialité</Link>
+            <Link href="/mentions-legales" className="hover:text-brand-500 transition-colors">Mentions légales</Link>
+            <Link href="/politique-confidentialite" className="hover:text-brand-500 transition-colors">Confidentialité</Link>
           </div>
         </div>
       </div>

@@ -2,21 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
-import { images } from "@/lib/images";
-
-const serviceImages: Record<string, string> = {
-  sprinkler: images.sprinklerCeiling,
-  ria: images.ria,
-  "poteaux-colonnes": images.pipes,
-  conformite: images.control,
-  maintenance: images.maintenance,
-  etude: images.project,
-};
+import { serviceImages } from "@/lib/images";
 
 export default function ServicesSection() {
   return (
-    <section className="section-padding bg-warm-50">
-      <div className="container-custom">
+    <section className="section-padding section-elevated">
+      <div className="absolute inset-0 bg-hero-glow opacity-30 pointer-events-none" />
+      <div className="grain-overlay" />
+
+      <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
           <div className="max-w-2xl">
             <p className="section-label">Nos métiers</p>
@@ -38,26 +32,26 @@ export default function ServicesSection() {
             <Link
               key={service.id}
               href={`/services#${service.id}`}
-              className="card group hover:shadow-lift transition-shadow duration-300"
+              className="card group"
             >
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden bg-navy-800">
                 <Image
-                  src={serviceImages[service.id] || images.industrial}
+                  src={serviceImages[service.id]}
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 bg-brand-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-sm">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
+                <span className="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="absolute bottom-4 left-4 right-4 font-display text-xl text-white">
+                <h3 className="absolute bottom-4 left-4 right-4 font-sans font-bold text-xl text-white">
                   {service.title}
                 </h3>
               </div>
               <div className="card-body">
-                <p className="text-sm text-navy-600 leading-relaxed line-clamp-2">
+                <p className="text-sm text-navy-300 leading-relaxed line-clamp-2">
                   {service.shortDescription}
                 </p>
                 <span className="inline-flex items-center gap-1 mt-4 text-link">

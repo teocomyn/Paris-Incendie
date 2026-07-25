@@ -26,7 +26,7 @@ export default function CarrieresPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-10 mb-14 items-center">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-              <Image src={images.construction} alt="Équipe sur chantier" fill className="object-cover" sizes="50vw" />
+              <Image src={images.constructionAlt} alt="Équipe sur chantier" fill className="object-cover" sizes="50vw" />
             </div>
             <div>
               <h2 className="section-title mb-4">Rejoindre nos équipes</h2>

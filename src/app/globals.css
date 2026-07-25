@@ -8,11 +8,11 @@
   }
 
   body {
-    @apply bg-warm-50 text-navy-800 antialiased;
+    @apply bg-navy-950 text-navy-100 antialiased;
   }
 
   ::selection {
-    @apply bg-brand-100 text-brand-900;
+    @apply bg-brand-500/30 text-white;
   }
 }
 
@@ -22,44 +22,60 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-sm bg-brand-600 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-all duration-200 hover:bg-brand-700 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-white px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy-950 transition-all duration-200 hover:bg-navy-100 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-navy-950 shadow-glow-sm;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2.5 rounded-sm border-2 border-navy-800 bg-transparent px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy-900 transition-all duration-200 hover:bg-navy-900 hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-navy-400 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border border-navy-100/20 bg-navy-900/40 backdrop-blur-sm px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-navy-100 transition-all duration-200 hover:border-brand-500/50 hover:bg-brand-500/10 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand-500/50 focus:ring-offset-2 focus:ring-offset-navy-950;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-brand-600 px-6 py-3 text-sm font-semibold text-brand-600 transition-colors hover:bg-brand-600 hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-500 px-6 py-3 text-sm font-semibold text-brand-500 transition-colors hover:bg-brand-500 hover:text-white;
   }
 
   .btn-ghost-light {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 hover:border-brand-500/40;
+  }
+
+  .btn-flame {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-500 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition-all duration-200 hover:bg-brand-400 active:scale-[0.98] shadow-glow-sm;
   }
 
   .section-padding {
     @apply py-16 md:py-24 lg:py-28;
   }
 
+  .section-dark {
+    @apply bg-navy-950 relative overflow-hidden;
+  }
+
+  .section-elevated {
+    @apply bg-navy-900 relative overflow-hidden;
+  }
+
   .section-label {
-    @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-brand-600 mb-4;
+    @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-brand-500 mb-4;
   }
 
   .section-label::before {
     content: "";
-    @apply block w-8 h-px bg-brand-600;
+    @apply block w-8 h-px bg-brand-500;
   }
 
   .section-title {
-    @apply font-display text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] text-navy-900 leading-[1.12] tracking-tight;
+    @apply font-sans font-bold text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] text-white leading-[1.12] tracking-tight;
   }
 
   .section-subtitle {
-    @apply mt-5 text-base md:text-lg text-navy-600 max-w-xl leading-relaxed;
+    @apply mt-5 text-base md:text-lg text-navy-300 max-w-xl leading-relaxed;
   }
 
   .card {
-    @apply rounded-sm bg-white border border-navy-200/80 overflow-hidden shadow-soft;
+    @apply rounded-lg bg-navy-900/60 border border-navy-800/80 overflow-hidden backdrop-blur-sm transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-brand-500/30 shadow-glow-sm;
   }
 
   .card-body {
@@ -67,15 +83,53 @@
   }
 
   .photo-frame {
-    @apply relative overflow-hidden rounded-sm shadow-photo;
+    @apply relative overflow-hidden rounded-lg shadow-photo border border-navy-800/60;
   }
 
   .divider-red {
-    @apply w-12 h-1 bg-brand-600;
+    @apply w-12 h-1 bg-brand-500 rounded-full;
   }
 
   .text-link {
-    @apply text-sm font-semibold text-brand-600 hover:text-brand-700 underline-offset-4 hover:underline transition-colors;
+    @apply text-sm font-semibold text-brand-500 hover:text-brand-400 underline-offset-4 hover:underline transition-colors;
+  }
+
+  /* Immersive backgrounds */
+  .grain-overlay {
+    @apply pointer-events-none absolute inset-0 bg-grain bg-grain opacity-[0.035] mix-blend-overlay;
+  }
+
+  .glow-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl animate-pulse-glow;
+  }
+
+  .glow-orb-flame {
+    background: radial-gradient(circle, rgba(252, 80, 0, 0.45) 0%, transparent 70%);
+  }
+
+  .glow-orb-amber {
+    background: radial-gradient(circle, rgba(252, 120, 0, 0.25) 0%, transparent 70%);
+  }
+
+  .immersive-grid {
+    @apply absolute inset-0 bg-grid-pattern bg-grid opacity-40;
+  }
+
+  /* Content typography on dark sections */
+  .section-padding h1,
+  .section-padding h2,
+  .section-padding h3,
+  .section-padding h4 {
+    @apply text-white;
+  }
+
+  .prose-dark p,
+  .prose-dark li {
+    @apply text-navy-300;
+  }
+
+  .input-dark {
+    @apply w-full rounded-lg border border-navy-700 bg-navy-900/80 px-4 py-3.5 text-sm text-navy-100 placeholder:text-navy-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors backdrop-blur-sm;
   }
 }
 

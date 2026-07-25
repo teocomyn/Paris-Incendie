@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
-import { images } from "@/lib/images";
+import { images, realPhotos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Demande de devis",
@@ -22,7 +22,7 @@ export default function DevisPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            {[images.sprinklerCeiling, images.ria, images.construction].map((src, i) => (
+            {[images.gallery[0], images.gallery[5], images.gallery[21]].map((src, i) => (
               <div key={i} className="relative aspect-[16/10] rounded-lg overflow-hidden">
                 <Image src={src} alt="Projet incendie" fill className="object-cover" sizes="33vw" />
               </div>
@@ -31,7 +31,7 @@ export default function DevisPage() {
 
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2">
-              <h2 className="font-display text-2xl text-navy-900 mb-4">Comment ça se passe</h2>
+              <h2 className="font-sans text-2xl text-white mb-4">Comment ça se passe</h2>
               <ol className="space-y-4">
                 {[
                   "Vous décrivez votre bâtiment et vos besoins",
@@ -39,8 +39,8 @@ export default function DevisPage() {
                   "Visite sur site si nécessaire",
                   "Devis détaillé conforme aux normes",
                 ].map((step, i) => (
-                  <li key={step} className="flex gap-3 text-sm text-navy-700">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white text-xs font-bold">
+                  <li key={step} className="flex gap-3 text-sm text-navy-300">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-bold">
                       {i + 1}
                     </span>
                     {step}
@@ -49,6 +49,7 @@ export default function DevisPage() {
               </ol>
             </div>
             <div className="lg:col-span-3 card card-body">
+              <h2 className="font-sans text-xl text-white mb-6">Votre demande</h2>
               <ContactForm variant="devis" />
             </div>
           </div>

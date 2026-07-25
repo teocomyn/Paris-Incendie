@@ -5,7 +5,7 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/lib/data";
-import { images } from "@/lib/images";
+import { images, realPhotos } from "@/lib/images";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact"
         subtitle="Devis, projet ou urgence — notre équipe vous répond sous 24h."
-        image={images.team}
+        image={realPhotos.sprinklerAction}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Contact" }]}
       />
 
@@ -27,16 +27,16 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-10 mb-12">
             <div className="relative aspect-[16/10] rounded-lg overflow-hidden">
-              <Image src={images.firefighter} alt="Équipe sécurité incendie" fill className="object-cover" sizes="50vw" />
+              <Image src={realPhotos.sprinklerAction} alt="Sprinkler en action" fill className="object-cover" sizes="50vw" />
             </div>
-            <div className="relative aspect-[16/10] rounded-lg overflow-hidden">
-              <Image src={images.maintenance} alt="Maintenance sprinkler" fill className="object-cover" sizes="50vw" />
+            <div className="relative aspect-[16/10] rounded-lg overflow-hidden photo-frame">
+              <Image src={realPhotos.pumpRoom} alt="Salle des pompes" fill className="object-cover" sizes="50vw" />
             </div>
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-6">
-              <h2 className="font-display text-2xl text-navy-900">Coordonnées</h2>
+              <h2 className="font-sans text-2xl text-white">Coordonnées</h2>
               {[
                 { icon: Phone, label: "Standard", value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/\s/g, "")}` },
                 { icon: Phone, label: "Astreinte 24/7", value: siteConfig.emergencyPhone, href: `tel:${siteConfig.emergencyPhone.replace(/\s/g, "")}` },
@@ -45,20 +45,20 @@ export default function ContactPage() {
                 { icon: Clock, label: "Horaires", value: "Lun–Ven 8h–18h" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-3">
-                  <item.icon className="h-5 w-5 text-brand-600 shrink-0 mt-0.5" />
+                  <item.icon className="h-5 w-5 text-brand-500 shrink-0 mt-0.5" />
                   <div>
                     <div className="text-xs font-bold text-navy-500 uppercase">{item.label}</div>
                     {item.href ? (
-                      <a href={item.href} className="text-sm font-semibold text-navy-900 hover:text-brand-600">{item.value}</a>
+                      <a href={item.href} className="text-sm font-semibold text-navy-100 hover:text-brand-500">{item.value}</a>
                     ) : (
-                      <div className="text-sm text-navy-800">{item.value}</div>
+                      <div className="text-sm text-navy-300">{item.value}</div>
                     )}
                   </div>
                 </div>
               ))}
             </div>
             <div className="lg:col-span-3 card card-body">
-              <h2 className="font-display text-xl text-navy-900 mb-6">Envoyer un message</h2>
+              <h2 className="font-sans text-xl text-white mb-6">Envoyer un message</h2>
               <ContactForm variant="contact" />
             </div>
           </div>

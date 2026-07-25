@@ -4,26 +4,27 @@ import { useState } from "react";
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import { faq } from "@/lib/data";
-import { images } from "@/lib/images";
+import { realPhotos } from "@/lib/images";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-custom">
+    <section className="section-padding section-dark">
+      <div className="grain-overlay" />
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <p className="section-label">FAQ</p>
             <h2 className="section-title mb-2">Questions fréquentes</h2>
             <div className="divider-red my-5" />
-            <p className="text-navy-600 mb-8 leading-relaxed">
+            <p className="text-navy-300 mb-8 leading-relaxed">
               Sprinkler, RIA, maintenance, devis — les réponses aux questions
               que nos clients nous posent le plus souvent.
             </p>
-            <div className="relative aspect-[4/3] photo-frame">
+            <div className="relative aspect-[4/3] photo-frame border-brand-500/20">
               <Image
-                src={images.fireEquipment}
+                src={realPhotos.sprinklerHead}
                 alt="Équipements sécurité incendie"
                 fill
                 className="object-cover"
@@ -38,8 +39,10 @@ export default function FAQSection() {
               return (
                 <div
                   key={item.question}
-                  className={`border rounded-sm transition-colors ${
-                    open ? "border-brand-200 bg-brand-50/30" : "border-navy-200 bg-white"
+                  className={`border rounded-lg transition-all duration-300 ${
+                    open
+                      ? "border-brand-500/40 bg-brand-500/5 shadow-glow-sm"
+                      : "border-navy-800 bg-navy-900/40"
                   }`}
                 >
                   <button
@@ -48,15 +51,15 @@ export default function FAQSection() {
                     onClick={() => setOpenIndex(open ? null : index)}
                     aria-expanded={open}
                   >
-                    <span className="font-semibold text-navy-900 text-sm">{item.question}</span>
+                    <span className="font-semibold text-white text-sm">{item.question}</span>
                     {open ? (
-                      <Minus className="h-4 w-4 text-brand-600 shrink-0" />
+                      <Minus className="h-4 w-4 text-brand-500 shrink-0" />
                     ) : (
-                      <Plus className="h-4 w-4 text-navy-400 shrink-0" />
+                      <Plus className="h-4 w-4 text-navy-500 shrink-0" />
                     )}
                   </button>
                   {open && (
-                    <div className="px-5 pb-5 text-sm text-navy-600 leading-relaxed">
+                    <div className="px-5 pb-5 text-sm text-navy-300 leading-relaxed">
                       {item.answer}
                     </div>
                   )}
