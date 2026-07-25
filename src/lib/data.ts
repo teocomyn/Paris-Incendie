@@ -3,8 +3,8 @@ export const siteConfig = {
   description:
     "Installateur sprinkler & RIA agréé APSAD en Île-de-France. Étude, installation, maintenance et dépannage 24h/24 depuis 2012.",
   url: "https://www.parisincendie.fr",
-  phone: "01 84 80 00 00",
-  emergencyPhone: "06 00 00 00 00",
+  phone: "+33 7 69 47 15 83",
+  emergencyPhone: "+33 7 69 47 15 83",
   whatsapp: "+33 7 69 47 15 83",
   email: "contact@parisincendie.fr",
   address: "Île-de-France, France",
