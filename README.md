@@ -1,13 +1,13 @@
-# Paris Incendie — Experts en Sécurité Incendie
+# Paris Incendie, Experts en Sécurité Incendie
 
 Site web professionnel pour Paris Incendie, entreprise spécialisée en sécurité incendie depuis 2012.
 
 ## Technologies
 
-- **Next.js 15** — Framework React avec App Router
-- **TypeScript** — Typage statique
-- **Tailwind CSS** — Styles utilitaires
-- **Lucide React** — Icônes
+- **Next.js 15**, Framework React avec App Router
+- **TypeScript**, Typage statique
+- **Tailwind CSS**, Styles utilitaires
+- **Lucide React**, Icônes
 
 ## Pages
 

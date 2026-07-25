@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité et protection des données — Paris Incendie.",
+  description: "Politique de confidentialité et protection des données, Paris Incendie.",
   path: "/politique-confidentialite",
   noIndex: true,
 });

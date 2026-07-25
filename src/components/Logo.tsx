@@ -6,7 +6,7 @@ interface LogoProps {
   showTagline?: boolean;
 }
 
-/** Icône seule — bouclier + tête sprinkler */
+/** Icône seule, bouclier + tête sprinkler */
 export function LogoMark({
   className = "h-11 w-11",
   light = false,

@@ -50,7 +50,7 @@ export const geoPages: GeoPageData[] = [
     h1: "Installation sprinkler Hauts-de-Seine (92)",
     metaTitle: "Installateur sprinkler Hauts-de-Seine (92)",
     metaDescription:
-      "Sprinkler & RIA en Hauts-de-Seine — Nanterre, Boulogne, Levallois. Installateur APSAD. Entrepôts, bureaux, commerces. Devis gratuit.",
+      "Sprinkler & RIA en Hauts-de-Seine, Nanterre, Boulogne, Levallois. Installateur APSAD. Entrepôts, bureaux, commerces. Devis gratuit.",
     zone: "Hauts-de-Seine (92)",
     intro:
       "Entrepôts de La Défense, zones logistiques de Gennevilliers, tertiaire de Boulogne-Billancourt : Paris Incendie installe et maintient des systèmes sprinkler et RIA dans tout le département des Hauts-de-Seine.",
@@ -75,7 +75,7 @@ export const geoPages: GeoPageData[] = [
     h1: "Installation sprinkler Seine-Saint-Denis (93)",
     metaTitle: "Installateur sprinkler Seine-Saint-Denis (93)",
     metaDescription:
-      "Installation sprinkler & RIA en Seine-Saint-Denis. Entrepôts, industrie, tertiaire. Agréé APSAD. Paris Incendie — devis sous 24h.",
+      "Installation sprinkler & RIA en Seine-Saint-Denis. Entrepôts, industrie, tertiaire. Agréé APSAD. Paris Incendie, devis sous 24h.",
     zone: "Seine-Saint-Denis (93)",
     intro:
       "Zones logistiques de Roissy, entrepôts de Saint-Denis, sites industriels de Bobigny : le 93 concentre de nombreux bâtiments soumis à des obligations sprinkler. Paris Incendie y déploie ses équipes de pose et de maintenance.",

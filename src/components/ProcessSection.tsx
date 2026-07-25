@@ -11,7 +11,7 @@ const steps = [
   {
     num: "02",
     title: "Préfabrication",
-    desc: "Assemblage des réseaux en atelier — tuyauterie agréée, robinetterie certifiée.",
+    desc: "Assemblage des réseaux en atelier, tuyauterie agréée, robinetterie certifiée.",
   },
   {
     num: "03",
@@ -42,7 +42,7 @@ export default function ProcessSection() {
             <p className="section-label">Notre méthode</p>
             <h2 className="section-title">Du diagnostic à la maintenance</h2>
             <p className="section-subtitle">
-              Un processus maîtrisé pour chaque projet SPK et RIA — sans surprise,
+              Un processus maîtrisé pour chaque projet SPK et RIA, sans surprise,
               avec traçabilité complète.
             </p>
           </div>

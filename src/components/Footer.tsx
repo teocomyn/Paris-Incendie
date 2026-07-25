@@ -9,7 +9,7 @@ import { realPhotos } from "@/lib/images";
 export default function Footer() {
   return (
     <footer className="relative bg-navy-950 text-navy-400 border-t border-navy-800 overflow-hidden">
-      {/* Grille thermodynamique — passe la souris / le doigt sur le footer */}
+      {/* Grille thermodynamique, passe la souris / le doigt sur le footer */}
       <div className="absolute inset-0 z-0">
         <FooterThermalBg />
       </div>
@@ -41,7 +41,7 @@ export default function Footer() {
               </Link>
               <p className="text-sm leading-relaxed">
                 Installation et maintenance sprinkler (SPK) et RIA.
-                Agréé APSAD — Île-de-France.
+                Agréé APSAD, Île-de-France.
               </p>
             </div>
 

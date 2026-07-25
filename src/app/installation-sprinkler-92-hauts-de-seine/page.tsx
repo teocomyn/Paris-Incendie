@@ -8,7 +8,7 @@ const PATH = "/installation-sprinkler-92-hauts-de-seine";
 export const metadata: Metadata = buildMetadata({
   title: "Installateur sprinkler Hauts-de-Seine (92)",
   description:
-    "Sprinkler & RIA en Hauts-de-Seine — Nanterre, Boulogne, Levallois. Installateur APSAD. Entrepôts, bureaux, commerces. Devis gratuit.",
+    "Sprinkler & RIA en Hauts-de-Seine, Nanterre, Boulogne, Levallois. Installateur APSAD. Entrepôts, bureaux, commerces. Devis gratuit.",
   path: PATH,
 });
 

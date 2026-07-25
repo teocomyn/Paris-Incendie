@@ -11,7 +11,7 @@ import { serviceIdToSlug } from "@/lib/service-pages";
 import { getBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services sprinkler & RIA — installateur APSAD IDF",
+  title: "Services sprinkler & RIA, installateur APSAD IDF",
   description:
     "Installateur sprinkler & RIA agréé APSAD en Île-de-France. Étude, pose, essais et maintenance. Devis gratuit sous 24h. ☎ 01 84 80 00 00.",
   path: "/services",
@@ -55,7 +55,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((f) => (
                       <li key={f} className="flex gap-2 text-sm text-navy-200">
-                        <span className="text-brand-500 font-bold">—</span>{f}
+                        <span className="text-brand-500 font-bold">·</span>{f}
                       </li>
                     ))}
                   </ul>

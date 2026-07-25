@@ -10,9 +10,9 @@ import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Carrières — technicien sprinkler & RIA",
+  title: "Carrières, technicien sprinkler & RIA",
   description:
-    "Rejoignez Paris Incendie — technicien sprinkler, chef de projet, RIA. CDI en Île-de-France. Installateur agréé APSAD.",
+    "Rejoignez Paris Incendie, technicien sprinkler, chef de projet, RIA. CDI en Île-de-France. Installateur agréé APSAD.",
   path: "/carrieres",
 });
 
@@ -21,7 +21,7 @@ export default function CarrieresPage() {
     <>
       <PageHeader
         title="Carrières"
-        subtitle="Techniciens sprinkler, RIA et chefs de projet — Île-de-France."
+        subtitle="Techniciens sprinkler, RIA et chefs de projet, Île-de-France."
         image={images.team}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Carrières" }]}
       />
@@ -35,8 +35,8 @@ export default function CarrieresPage() {
             <div className="glass-panel p-6 md:p-8">
               <h2 className="section-title mb-4">Rejoindre nos équipes</h2>
               <p className="text-navy-300 text-sm leading-relaxed">
-                Installateur agréé APSAD en croissance. Projets variés — industrie,
-                tertiaire, commerce — sur l&apos;ensemble de l&apos;Île-de-France.
+                Installateur agréé APSAD en croissance. Projets variés, industrie,
+                tertiaire, commerce, sur l&apos;ensemble de l&apos;Île-de-France.
               </p>
             </div>
           </div>

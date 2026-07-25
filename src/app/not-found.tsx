@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <section className="relative min-h-[70vh] flex items-center bg-navy-950 overflow-hidden">
       <div className="absolute inset-0">
-        <Image src={images.hero} alt="Sprinkler — sécurité incendie Paris Incendie" fill className="object-cover opacity-15" />
+        <Image src={images.hero} alt="Sprinkler, sécurité incendie Paris Incendie" fill className="object-cover opacity-15" />
         <div className="absolute inset-0 bg-hero-glow" />
         <div className="grain-overlay" />
       </div>

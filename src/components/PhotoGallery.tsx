@@ -42,7 +42,7 @@ export default function PhotoGallery() {
               <p className="section-label">Nos installations</p>
               <h2 className="section-title">30 réalisations en images</h2>
               <p className="text-navy-300 text-sm leading-relaxed mt-4">
-                Sprinkler, RIA, salles des pompes, chantiers et réseaux — matériel conforme NF EN 12845 et APSAD.
+                Sprinkler, RIA, salles des pompes, chantiers et réseaux, matériel conforme NF EN 12845 et APSAD.
               </p>
             </div>
             <Link href="/references" className="btn-secondary shrink-0 self-start">
@@ -72,17 +72,18 @@ export default function PhotoGallery() {
           </div>
         </ScrollReveal>
 
-        {/* Grille */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {preview.map((photo, i) => (
-            <ScrollReveal key={photo.src} delay={i * 60} className={i === 0 ? "md:col-span-2 md:row-span-2" : ""}>
-              <button
-                type="button"
-                onClick={() => openLightbox(i)}
-                className={`group relative w-full photo-frame overflow-hidden bg-navy-900 text-left ${
-                  i === 0 ? "aspect-[16/10] md:aspect-auto md:min-h-[340px]" : "aspect-square"
-                }`}
-              >
+        {/* Grille uniforme, pas de row-span pour éviter les trous */}
+        <ScrollReveal delay={120}>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {preview.map((photo, i) => (
+              <div key={photo.src} className={i === 0 ? "col-span-2" : ""}>
+                <button
+                  type="button"
+                  onClick={() => openLightbox(i)}
+                  className={`group relative w-full photo-frame overflow-hidden bg-navy-900 text-left ${
+                    i === 0 ? "aspect-[16/9]" : "aspect-[4/3]"
+                  }`}
+                >
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -100,16 +101,17 @@ export default function PhotoGallery() {
                     <Expand className="h-3.5 w-3.5" />
                   </span>
                 </div>
-              </button>
-            </ScrollReveal>
-          ))}
-        </div>
+                </button>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
 
         {filtered.length > HOME_PREVIEW_COUNT && (
           <ScrollReveal delay={200}>
             <div className="mt-8 text-center">
               <Link href="/references" className="btn-outline">
-                Voir les {filtered.length} photos {filter !== "all" ? `— ${galleryCategoryLabels[filter]}` : ""}
+                Voir les {filtered.length} photos {filter !== "all" ? `,  ${galleryCategoryLabels[filter]}` : ""}
               </Link>
             </div>
           </ScrollReveal>

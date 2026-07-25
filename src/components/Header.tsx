@@ -29,7 +29,7 @@ export default function Header() {
       }`}
     >
       <div className="container-custom relative z-[1]">
-        <div className="flex h-[68px] md:h-[76px] items-center justify-between gap-4">
+        <div className="flex h-[60px] md:h-[76px] items-center justify-between gap-3">
           <Link href="/" className="shrink-0 transition-opacity hover:opacity-90">
             <Logo variant="full-light" showTagline />
           </Link>

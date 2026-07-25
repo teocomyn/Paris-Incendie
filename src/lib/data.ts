@@ -5,13 +5,14 @@ export const siteConfig = {
   url: "https://www.parisincendie.fr",
   phone: "01 84 80 00 00",
   emergencyPhone: "06 00 00 00 00",
+  whatsapp: "+33 7 69 47 15 83",
   email: "contact@parisincendie.fr",
   address: "Île-de-France, France",
   streetAddress: "Île-de-France",
   addressLocality: "Paris",
   postalCode: "75000",
   founded: 2012,
-  siret: "[Numéro SIREN — à compléter]",
+  siret: "[Numéro SIREN, à compléter]",
   geo: {
     latitude: 48.8566,
     longitude: 2.3522,
@@ -148,7 +149,7 @@ export const testimonials = [
   {
     name: "Nicolas Perrin",
     role: "Responsable Industriel",
-    company: "Site de production — Seine-et-Marne",
+    company: "Site de production, Seine-et-Marne",
     project: "SPK · 8 000 m² · 2024",
     content:
       "Installation sprinkler sur 8 000 m² réalisée sans arrêt de production. Rapport APSAD conforme, équipe réactive du début à la mise en service.",
@@ -158,7 +159,7 @@ export const testimonials = [
   {
     name: "Laura Mercier",
     role: "Directrice de Site",
-    company: "Centre commercial — Val-de-Marne",
+    company: "Centre commercial, Val-de-Marne",
     project: "RIA + SPK · 5 semaines",
     content:
       "Pose du réseau RIA et extension SPK en 5 semaines. L'équipe a géré les contraintes d'ouverture au public et les accès techniques.",
@@ -168,7 +169,7 @@ export const testimonials = [
   {
     name: "Marc Dupont",
     role: "Gérant",
-    company: "PME logistique — Essonne",
+    company: "PME logistique, Essonne",
     project: "Maintenance · 3 ans",
     content:
       "Contrat de maintenance semestriel depuis 3 ans. Interventions rapides lors de nos 2 fuites réseau, astreinte efficace.",
@@ -178,7 +179,7 @@ export const testimonials = [
   {
     name: "Anne Simon",
     role: "Responsable HSE",
-    company: "Groupe industriel — Île-de-France",
+    company: "Groupe industriel, Île-de-France",
     project: "4 sites · NF EN",
     content:
       "Partenaire pour la maintenance de 4 sites. Suivi rigoureux, rapports de vérification clairs, bonne connaissance des normes NF EN.",
@@ -188,7 +189,7 @@ export const testimonials = [
   {
     name: "Sébastien Girard",
     role: "Responsable Technique",
-    company: "Immeuble tertiaire — Paris 15e",
+    company: "Immeuble tertiaire, Paris 15e",
     project: "Modernisation · 2023",
     content:
       "Modernisation du poste de contrôle sprinkler et remplacement de vannes. Chantier propre, respect du planning annoncé.",
@@ -241,42 +242,42 @@ export const faq = [
 
 export const references = [
   {
-    title: "Centre Commercial — Île-de-France",
+    title: "Centre Commercial, Île-de-France",
     category: "Tertiaire",
     description:
       "Installation complète d'un réseau sprinkler pour un centre commercial de 15 000 m². Conception, préfabrication et mise en service conforme NF EN.",
     services: ["Sprinkler", "RIA", "Mise en conformité"],
   },
   {
-    title: "Site Industriel — Seine-et-Marne",
+    title: "Site Industriel, Seine-et-Marne",
     category: "Industrie",
     description:
       "Modernisation du système SPK existant et extension du réseau RIA sur un site de production. Intervention sans arrêt de production.",
     services: ["Modernisation", "Extension réseau", "Maintenance"],
   },
   {
-    title: "Immeuble de Bureaux — Paris",
+    title: "Immeuble de Bureaux, Paris",
     category: "Tertiaire",
     description:
       "Étude, installation et certification APSAD d'un système sprinkler pour un immeuble tertiaire neuf de 8 étages.",
     services: ["Étude", "Sprinkler", "Certification APSAD"],
   },
   {
-    title: "Entrepôt Logistique — Val-de-Marne",
+    title: "Entrepôt Logistique, Val-de-Marne",
     category: "Logistique",
     description:
       "Création d'un réseau sprinkler haut-risque avec préfabrication et essais de mise en service. Contrat de maintenance semestrielle.",
     services: ["Préfabrication", "Sprinkler", "Contrat entretien"],
   },
   {
-    title: "Boutique Flagship — Paris Centre",
+    title: "Boutique Flagship, Paris Centre",
     category: "Commerce",
     description:
       "Installation discrète de système sprinkler pour boutique de luxe. Respect des contraintes architecturales et esthétiques.",
     services: ["Sprinkler boutique", "RIA", "Dépannage"],
   },
   {
-    title: "Hôpital — Région Parisienne",
+    title: "Hôpital, Région Parisienne",
     category: "Santé",
     description:
       "Maintenance corrective et préventive de 3 systèmes sprinkler et RIA. Mise en place d'astreinte 24/7.",

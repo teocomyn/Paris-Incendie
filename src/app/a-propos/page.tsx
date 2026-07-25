@@ -8,7 +8,7 @@ import { images, realPhotos, sectionPhotos } from "@/lib/images";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "À propos — installateur APSAD depuis 2012",
+  title: "À propos, installateur APSAD depuis 2012",
   description:
     "Paris Incendie : installateur sprinkler & RIA agréé APSAD en Île-de-France depuis 2012. Bureau d'études, ateliers, 500+ projets.",
   path: "/a-propos",
@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="À propos de Paris Incendie"
-        subtitle="Installateur agréé APSAD — sprinkler, RIA, mise en conformité et maintenance."
+        subtitle="Installateur agréé APSAD, sprinkler, RIA, mise en conformité et maintenance."
         image={realPhotos.pumpRoomWide}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "À propos" }]}
       />

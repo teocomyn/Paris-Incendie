@@ -20,7 +20,7 @@ export default function FAQSection() {
             <h2 className="section-title mb-2">Questions fréquentes</h2>
             <div className="divider-red my-5" />
             <p className="text-navy-300 mb-8 leading-relaxed">
-              Sprinkler, RIA, maintenance, devis — les réponses aux questions
+              Sprinkler, RIA, maintenance, devis, les réponses aux questions
               que nos clients nous posent le plus souvent.
             </p>
             <div className="relative aspect-[4/3] photo-frame border-brand-500/20">

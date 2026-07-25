@@ -10,9 +10,9 @@ import { buildMetadata } from "@/lib/seo";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact — installateur APSAD Île-de-France",
+  title: "Contact, installateur APSAD Île-de-France",
   description:
-    `Contactez Paris Incendie — ${siteConfig.phone}. Devis, projet ou urgence sprinkler/RIA. Réponse sous 24h. Astreinte 24h/24.`,
+    `Contactez Paris Incendie, ${siteConfig.phone}. Devis, projet ou urgence sprinkler/RIA. Réponse sous 24h. Astreinte 24h/24.`,
   path: "/contact",
 });
 
@@ -21,7 +21,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact"
-        subtitle="Devis, projet ou urgence — notre équipe vous répond sous 24h."
+        subtitle="Devis, projet ou urgence, notre équipe vous répond sous 24h."
         image={realPhotos.sprinklerAction}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Contact" }]}
       />

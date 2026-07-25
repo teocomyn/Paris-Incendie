@@ -185,6 +185,48 @@
     @apply glass-subtle flex h-10 w-10 items-center justify-center rounded-full text-white transition-all duration-300 hover:border-brand-500/40 hover:bg-brand-500/10;
   }
 
+  /* ─── Hero mobile ─── */
+  .hero-mobile-card {
+    @apply glass-strong rounded-3xl p-5 sm:p-6;
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 24px 64px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .hero-mobile-stats {
+    @apply grid grid-cols-3 gap-2 pt-4 border-t border-white/10;
+  }
+
+  .hero-mobile-stat {
+    @apply text-center rounded-xl px-2 py-2.5;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .whatsapp-float {
+    @apply fixed bottom-5 right-5 z-[60] flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-all duration-300 hover:scale-105 active:scale-95;
+    background: linear-gradient(145deg, #25d366 0%, #128c7e 100%);
+    box-shadow:
+      0 8px 28px rgba(37, 211, 102, 0.45),
+      0 4px 12px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .whatsapp-float:hover {
+    box-shadow:
+      0 12px 36px rgba(37, 211, 102, 0.55),
+      0 6px 16px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .whatsapp-float-label {
+    @apply pointer-events-none absolute right-full mr-3 hidden rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-white opacity-0 transition-all duration-300 group-hover:opacity-100 md:block;
+    background: rgba(18, 140, 126, 0.95);
+    white-space: nowrap;
+  }
+
   /* ─── Typography ─── */
   .section-label {
     @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-brand-500 mb-4;

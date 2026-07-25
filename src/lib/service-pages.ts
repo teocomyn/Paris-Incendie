@@ -66,7 +66,7 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "ria",
     title: "RIA",
-    h1: "Installation RIA — Robinet Incendie Armé",
+    h1: "Installation RIA, Robinet Incendie Armé",
     metaTitle: "Installation RIA Île-de-France",
     metaDescription:
       "Installateur RIA agréé APSAD en IDF. Réseaux conformes NF S 61-919, mise en conformité, dépannage et maintenance semestrielle. Devis sous 24h.",
@@ -144,7 +144,7 @@ export const servicePages: ServicePageData[] = [
     h1: "Mise en conformité incendie APSAD",
     metaTitle: "Mise en conformité APSAD sprinkler & RIA",
     metaDescription:
-      "Audit et mise en conformité sprinkler/RIA en Île-de-France. Modernisation, extension réseau, certification APSAD. Paris Incendie — devis gratuit.",
+      "Audit et mise en conformité sprinkler/RIA en Île-de-France. Modernisation, extension réseau, certification APSAD. Paris Incendie, devis gratuit.",
     intro:
       "Votre installation existante ne répond plus à la réglementation ou aux exigences de votre assureur ? Paris Incendie audite, planifie et réalise les travaux de mise en conformité APSAD pour vos systèmes sprinkler et RIA.",
     sections: [
@@ -178,10 +178,10 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "depannage-sprinkler-urgence",
     title: "Dépannage urgent",
-    h1: "Dépannage sprinkler & RIA — astreinte 24h/24",
+    h1: "Dépannage sprinkler & RIA, astreinte 24h/24",
     metaTitle: "Dépannage sprinkler urgence IDF 24h/24",
     metaDescription:
-      "Dépannage sprinkler et RIA en urgence — astreinte 24h/24 en Île-de-France. Fuites, alarmes, pannes vanne. Paris Incendie agréé APSAD.",
+      "Dépannage sprinkler et RIA en urgence, astreinte 24h/24 en Île-de-France. Fuites, alarmes, pannes vanne. Paris Incendie agréé APSAD.",
     intro:
       "Fuite sur réseau, alarme intempestive, vanne bloquée ou déclenchement accidentel : notre astreinte technique intervient 24h/24 et 7j/7 en Île-de-France pour rétablir la sécurité de vos locaux.",
     sections: [
@@ -213,7 +213,7 @@ export const servicePages: ServicePageData[] = [
     h1: "Bureau d'études sprinkler & RIA",
     metaTitle: "Bureau d'études sprinkler Paris IDF",
     metaDescription:
-      "Bureau d'études incendie intégré — plans sprinkler & RIA conformes NF EN et APSAD. Dimensionnement, préfabrication, suivi de projet. Paris Incendie.",
+      "Bureau d'études incendie intégré, plans sprinkler & RIA conformes NF EN et APSAD. Dimensionnement, préfabrication, suivi de projet. Paris Incendie.",
     intro:
       "Notre bureau d'études intégré dimensionne vos réseaux sprinkler et RIA en amont de la pose : calculs hydrauliques, implantation des têtes, choix des matériaux agréés et plans d'exécution pour vos bureaux de contrôle et assureurs.",
     sections: [

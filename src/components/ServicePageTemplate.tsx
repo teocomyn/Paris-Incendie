@@ -55,7 +55,7 @@ export default function ServicePageTemplate({ page }: ServicePageTemplateProps) 
                 <ul className="space-y-2">
                   {page.features.map((f) => (
                     <li key={f} className="flex gap-2 text-sm text-navy-200">
-                      <span className="text-brand-500 font-bold">—</span> {f}
+                      <span className="text-brand-500 font-bold">·</span> {f}
                     </li>
                   ))}
                 </ul>

@@ -6,7 +6,7 @@ import { images, realPhotos } from "@/lib/images";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Devis gratuit sprinkler & RIA — réponse 24h",
+  title: "Devis gratuit sprinkler & RIA, réponse 24h",
   description:
     "Demandez un devis gratuit pour installation sprinkler, RIA, mise en conformité ou maintenance en Île-de-France. Réponse sous 24h ouvrées.",
   path: "/devis",
@@ -17,7 +17,7 @@ export default function DevisPage() {
     <>
       <PageHeader
         title="Demande de devis"
-        subtitle="Gratuit, sans engagement — réponse sous 24h ouvrées."
+        subtitle="Gratuit, sans engagement, réponse sous 24h ouvrées."
         image={images.project}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Devis" }]}
       />

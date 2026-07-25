@@ -36,7 +36,7 @@ const ThermodynamicGrid = ({
 
     const mouse = { x: -1000, y: -1000, prevX: -1000, prevY: -1000, active: false };
 
-    /** Palette Paris Incendie — noir → orange #FC5000 → blanc chaud */
+    /** Palette Paris Incendie, noir → orange #FC5000 → blanc chaud */
     const getThermalColor = (t: number) => {
       const r = Math.min(255, Math.max(5, 5 + t * 247));
       const g = Math.min(255, Math.max(5, Math.max(0, (t - 0.15) * 280)));

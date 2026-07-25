@@ -15,7 +15,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "Un projet sprinkler ou RIA ?",
-  subtitle = "Décrivez-nous votre bâtiment — devis gratuit sous 24h ouvrées.",
+  subtitle = "Décrivez-nous votre bâtiment, devis gratuit sous 24h ouvrées.",
   primaryLabel = "Demander un devis",
   primaryHref = "/devis",
   showImage = true,

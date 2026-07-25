@@ -423,7 +423,7 @@ Faites auditer votre bâtiment par un installateur agréé APSAD pour définir l
     content: `
 ## Qu'est-ce que l'APSAD ?
 
-Assemblée Plénière des Sociétés d'Assurances Dommages — elle certifie les installateurs et contrôle la qualité des installations.
+Assemblée Plénière des Sociétés d'Assurances Dommages, elle certifie les installateurs et contrôle la qualité des installations.
 
 ## La certification R4
 

@@ -4,18 +4,19 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import EmergencyBanner from "@/components/EmergencyBanner";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import JsonLd from "@/components/JsonLd";
 import { siteConfig, seoKeywords } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "Installation Sprinkler & RIA — Île-de-France",
+    title: "Installation Sprinkler & RIA, Île-de-France",
     description: siteConfig.description,
     path: "/",
   }),
   title: {
-    default: `${siteConfig.name} | Installation Sprinkler & RIA — Île-de-France`,
+    default: `${siteConfig.name} | Installation Sprinkler & RIA, Île-de-France`,
     template: `%s | ${siteConfig.name}`,
   },
   keywords: seoKeywords,
@@ -38,6 +39,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

@@ -9,9 +9,9 @@ import { Calendar, Clock } from "lucide-react";
 import { images } from "@/lib/images";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog sécurité incendie — sprinkler, RIA, normes APSAD",
+  title: "Blog sécurité incendie, sprinkler, RIA, normes APSAD",
   description:
-    "Conseils sécurité incendie, sprinkler, RIA, normes APSAD et maintenance — articles par les experts Paris Incendie.",
+    "Conseils sécurité incendie, sprinkler, RIA, normes APSAD et maintenance, articles par les experts Paris Incendie.",
   path: "/blog",
 });
 
@@ -20,7 +20,7 @@ export default function BlogPage() {
     <>
       <PageHeader
         title="Blog & actualités"
-        subtitle="Prévention incendie, normes, maintenance — par nos équipes."
+        subtitle="Prévention incendie, normes, maintenance, par nos équipes."
         image={images.safety}
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Blog" }]}
       />

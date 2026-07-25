@@ -17,7 +17,7 @@ export default function FeaturesSection() {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Full-bleed photo band — respiration visuelle sans glass */}
+      {/* Full-bleed photo band, respiration visuelle sans glass */}
       <div className="photo-bleed relative mb-16 md:mb-20">
         <Image src={wide} alt="Salle des pompes conforme NF EN" fill className="object-cover opacity-40" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/70 to-navy-950/40" />

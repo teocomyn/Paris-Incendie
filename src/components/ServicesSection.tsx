@@ -20,7 +20,7 @@ export default function ServicesSection() {
               <h2 className="section-title">Sprinkler, RIA, colonnes sèches & SAV</h2>
               <div className="divider-red mt-5 mb-5" />
               <p className="section-subtitle !mt-0">
-                De l&apos;étude à la maintenance — installations conformes FM Global,
+                De l&apos;étude à la maintenance, installations conformes FM Global,
                 NF EN, NFPA et APSAD.
               </p>
             </div>

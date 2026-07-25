@@ -1,4 +1,4 @@
-# Paris Incendie — llms.txt
+# Paris Incendie, llms.txt
 # https://www.parisincendie.fr
 
 > Installateur sprinkler (SPK) et RIA agréé APSAD en Île-de-France depuis 2012.
@@ -15,7 +15,7 @@
 
 ## Services
 - Installation sprinkler SPK (NF EN 12845, FM Global, NFPA)
-- Installation RIA — Robinet Incendie Armé (NF S 61-919)
+- Installation RIA, Robinet Incendie Armé (NF S 61-919)
 - Poteaux incendie et colonnes sèches/humides
 - Mise en conformité APSAD
 - Maintenance préventive semestrielle

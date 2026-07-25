@@ -8,7 +8,7 @@ const PATH = "/installation-sprinkler-93-seine-saint-denis";
 export const metadata: Metadata = buildMetadata({
   title: "Installateur sprinkler Seine-Saint-Denis (93)",
   description:
-    "Installation sprinkler & RIA en Seine-Saint-Denis. Entrepôts, industrie, tertiaire. Agréé APSAD. Paris Incendie — devis sous 24h.",
+    "Installation sprinkler & RIA en Seine-Saint-Denis. Entrepôts, industrie, tertiaire. Agréé APSAD. Paris Incendie, devis sous 24h.",
   path: PATH,
 });
 

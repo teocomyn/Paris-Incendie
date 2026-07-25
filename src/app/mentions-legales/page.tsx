@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Mentions légales",
-  description: "Mentions légales du site Paris Incendie — installateur sprinkler & RIA.",
+  description: "Mentions légales du site Paris Incendie, installateur sprinkler & RIA.",
   path: "/mentions-legales",
   noIndex: true,
 });

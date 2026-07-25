@@ -1,9 +1,9 @@
 /**
- * Bibliothèque d'images — 30 photos réelles Paris Incendie.
+ * Bibliothèque d'images, 30 photos réelles Paris Incendie.
  */
 const p = (name: string) => `/images/${name}`;
 
-/** Toutes les photos réelles — 30 images */
+/** Toutes les photos réelles, 30 images */
 export const allRealPhotos = [
   p("sprinkler-action.png"),
   p("sprinkler-head-closeup.png"),
@@ -59,36 +59,36 @@ const galleryCategories: GalleryCategory[] = [
 ];
 
 export const galleryCaptions = [
-  "Déclenchement sprinkler — extinction automatique",
-  "Tête sprinkler laiton — détection thermique",
-  "Poste d'alarme sprinkler — réseau sous pression",
-  "Salle des pompes — groupe surpresseur",
-  "Centrale de pompage — installation conforme NF EN",
-  "Armoire RIA — robinet incendie armé",
-  "Schéma réseau RIA — implantation conforme",
-  "Réseau sprinkler — tuyauterie rouge",
-  "Tête sprinkler en plafond — installation",
-  "Extincteur — maintenance préventive",
-  "Tête sprinkler — ampoule thermique",
-  "Sprinkler laiton — gicleur automatique",
-  "Poteau incendie — colonne sèche",
-  "Réseau extérieur — vannes et manomètres",
-  "Armoire incendie — équipement RIA",
-  "Sprinkler avec reflet — signalétique FEU",
-  "Poteau incendie — installation extérieure",
-  "Chantier — percements compartimentage",
-  "Chantier — locaux techniques béton",
-  "Chantier — réseau en cours de pose",
-  "Local technique — vannes bleues sur dalle",
-  "Réseau eau de ville — tuyauterie rouge",
-  "Salle pompes — centrale de contrôle",
-  "Parking — sprinklers en plafond",
-  "Compartimentage — passages de réseau",
-  "Poste de contrôle — armoire électrique",
-  "Réseau RIA — tuyauterie rouge et bleue",
-  "Vannes et manomètres — essais hydrauliques",
-  "Installation extérieure — colonnes montantes",
-  "Local pompes — réseau complet NF EN",
+  "Déclenchement sprinkler, extinction automatique",
+  "Tête sprinkler laiton, détection thermique",
+  "Poste d'alarme sprinkler, réseau sous pression",
+  "Salle des pompes, groupe surpresseur",
+  "Centrale de pompage, installation conforme NF EN",
+  "Armoire RIA, robinet incendie armé",
+  "Schéma réseau RIA, implantation conforme",
+  "Réseau sprinkler, tuyauterie rouge",
+  "Tête sprinkler en plafond, installation",
+  "Extincteur, maintenance préventive",
+  "Tête sprinkler, ampoule thermique",
+  "Sprinkler laiton, gicleur automatique",
+  "Poteau incendie, colonne sèche",
+  "Réseau extérieur, vannes et manomètres",
+  "Armoire incendie, équipement RIA",
+  "Sprinkler avec reflet, signalétique FEU",
+  "Poteau incendie, installation extérieure",
+  "Chantier, percements compartimentage",
+  "Chantier, locaux techniques béton",
+  "Chantier, réseau en cours de pose",
+  "Local technique, vannes bleues sur dalle",
+  "Réseau eau de ville, tuyauterie rouge",
+  "Salle pompes, centrale de contrôle",
+  "Parking, sprinklers en plafond",
+  "Compartimentage, passages de réseau",
+  "Poste de contrôle, armoire électrique",
+  "Réseau RIA, tuyauterie rouge et bleue",
+  "Vannes et manomètres, essais hydrauliques",
+  "Installation extérieure, colonnes montantes",
+  "Local pompes, réseau complet NF EN",
 ] as const;
 
 export const galleryItems = allRealPhotos.map((src, i) => ({
@@ -182,7 +182,7 @@ export const processImages = [
   allRealPhotos[4],
 ] as const;
 
-/** Photos dédiées par section accueil — zéro doublon */
+/** Photos dédiées par section accueil, zéro doublon */
 export const sectionPhotos = {
   hero: [allRealPhotos[0], allRealPhotos[1], allRealPhotos[2], allRealPhotos[3]],
   heroMobile: [allRealPhotos[1], allRealPhotos[3], allRealPhotos[5]],
