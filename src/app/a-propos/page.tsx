@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="section-title mb-6">Notre histoire</h2>
-              <div className="space-y-4 text-navy-300 leading-relaxed text-sm">
+              <div className="space-y-4 text-navy-300 leading-relaxed text-sm glass-panel p-6 md:p-8">
                 <p>
                   Paris Incendie installe et maintient des systèmes de protection incendie
                   depuis {siteConfig.founded}. Reconnue par les entreprises agréées du
@@ -88,7 +88,7 @@ export default function AboutPage() {
               tuyauteries sous pression alimente des têtes sprinkler qui projettent
               l&apos;eau directement sur le foyer dès la montée de température.
             </p>
-            <p className="text-navy-600 text-sm leading-relaxed">
+            <p className="text-navy-300 text-sm leading-relaxed">
               Extinction localisée, alarme simultanée, conformité NF EN 12845 et
               certification APSAD R4 pour les installateurs.
             </p>

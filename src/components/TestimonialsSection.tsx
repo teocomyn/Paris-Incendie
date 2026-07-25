@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
               sizes="500px"
             />
             <div className="absolute inset-0 bg-navy-950/40" />
-            <div className="absolute bottom-6 left-6 right-6 bg-navy-900/90 backdrop-blur-md border border-brand-500/20 rounded-lg p-5 shadow-glow">
+            <div className="absolute bottom-6 left-6 right-6 glass-panel p-5 z-[2]">
               <p className="font-sans font-semibold text-lg text-white leading-snug">
                 &ldquo;{testimonials[0].content}&rdquo;
               </p>

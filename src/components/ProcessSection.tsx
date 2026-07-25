@@ -65,7 +65,7 @@ export default function ProcessSection() {
                   sizes="400px"
                 />
               </div>
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-7 glass-panel p-6 md:p-8">
                 <h3 className="font-sans font-bold text-2xl text-white mb-3">{step.title}</h3>
                 <p className="text-navy-300 leading-relaxed max-w-lg">{step.desc}</p>
               </div>

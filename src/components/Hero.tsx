@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="container-custom relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 md:py-28">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/25 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 glass-pill px-4 py-2 mb-8">
               <Shield className="h-3.5 w-3.5 text-brand-500" />
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-400">
                 Agréé APSAD · Île-de-France · Depuis 2012
@@ -55,14 +55,14 @@ export default function Hero() {
               </a>
             </div>
 
-            <dl className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+            <dl className="grid grid-cols-3 gap-3 sm:gap-6 pt-8">
               {[
                 { value: "500+", label: "Projets" },
                 { value: "2012", label: "Création" },
                 { value: "24/7", label: "Astreinte" },
               ].map((s) => (
-                <div key={s.label}>
-                  <dt className="font-sans font-bold text-3xl md:text-4xl text-white">{s.value}</dt>
+                <div key={s.label} className="glass-stat text-center sm:text-left">
+                  <dt className="font-sans font-bold text-2xl sm:text-3xl md:text-4xl text-white">{s.value}</dt>
                   <dd className="text-[10px] font-semibold uppercase tracking-[0.15em] text-navy-400 mt-1.5">{s.label}</dd>
                 </div>
               ))}
@@ -104,7 +104,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute bottom-16 -right-4 bg-navy-900/90 backdrop-blur-md border border-brand-500/30 rounded-lg shadow-glow p-4 max-w-[210px]">
+            <div className="absolute bottom-16 -right-4 glass-panel p-4 max-w-[210px] z-[2]">
               <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-brand-500 mb-1">Certifié</p>
               <p className="font-sans font-bold text-lg text-white leading-tight">APSAD R4 & R5</p>
             </div>

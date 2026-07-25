@@ -30,7 +30,7 @@ export default function ReferencesPage() {
               <article key={ref.title} className="card">
                 <div className="relative aspect-[16/10] overflow-hidden bg-navy-100">
                   <Image src={referenceImages[i]} alt={ref.title} fill className="object-cover" sizes="33vw" />
-                  <span className="absolute top-3 left-3 bg-brand-500 text-white px-2 py-1 text-xs font-bold rounded-full">
+                  <span className="absolute top-3 left-3 glass-flame px-2 py-1 text-xs font-bold">
                     {ref.category}
                   </span>
                 </div>
@@ -39,7 +39,7 @@ export default function ReferencesPage() {
                   <p className="text-sm text-navy-400 leading-relaxed mb-4">{ref.description}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {ref.services.map((s) => (
-                      <span key={s} className="text-[10px] font-medium bg-navy-800 text-navy-300 px-2 py-0.5 rounded-full">
+                      <span key={s} className="text-[10px] font-medium glass-pill px-2 py-0.5 text-navy-300">
                         {s}
                       </span>
                     ))}
@@ -60,7 +60,7 @@ export default function ReferencesPage() {
               { value: "APSAD", label: "Certification" },
               { value: "24/7", label: "Astreinte SAV" },
             ].map((s) => (
-              <div key={s.label}>
+              <div key={s.label} className="glass-stat p-6">
                 <div className="text-3xl md:text-4xl font-bold text-brand-500">{s.value}</div>
                 <div className="text-xs text-navy-400 mt-1">{s.label}</div>
               </div>

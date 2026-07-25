@@ -42,6 +42,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
       },
+      borderRadius: {
+        glass: "1.25rem",
+        "glass-lg": "1.75rem",
+      },
       boxShadow: {
         soft: "0 2px 24px -4px rgba(0, 0, 0, 0.4)",
         photo: "0 8px 40px -8px rgba(0, 0, 0, 0.6)",
@@ -49,6 +53,8 @@ const config: Config = {
         glow: "0 0 80px -12px rgba(252, 80, 0, 0.45)",
         "glow-sm": "0 0 40px -8px rgba(252, 80, 0, 0.35)",
         "glow-lg": "0 0 120px -20px rgba(252, 80, 0, 0.5)",
+        glass: "0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.18)",
+        "glass-lg": "0 16px 48px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.2)",
       },
       backgroundImage: {
         "grid-pattern":
@@ -59,6 +65,8 @@ const config: Config = {
           "linear-gradient(180deg, #E4E4E4 0%, #FC5000 45%, #050505 100%)",
         "hero-glow":
           "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(252,80,0,0.35) 0%, transparent 70%)",
+        "glass-shine":
+          "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 40%)",
       },
       backgroundSize: {
         grid: "64px 64px",

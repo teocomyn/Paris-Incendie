@@ -35,7 +35,7 @@ export default function ContactPage() {
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-6 glass-panel p-6 md:p-8">
               <h2 className="font-sans text-2xl text-white">Coordonnées</h2>
               {[
                 { icon: Phone, label: "Standard", value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/\s/g, "")}` },
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 { icon: MapPin, label: "Zone", value: siteConfig.address },
                 { icon: Clock, label: "Horaires", value: "Lun–Ven 8h–18h" },
               ].map((item) => (
-                <div key={item.label} className="flex gap-3">
+                <div key={item.label} className="flex gap-3 glass-subtle p-3 rounded-xl">
                   <item.icon className="h-5 w-5 text-brand-500 shrink-0 mt-0.5" />
                   <div>
                     <div className="text-xs font-bold text-navy-500 uppercase">{item.label}</div>

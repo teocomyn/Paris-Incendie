@@ -23,7 +23,7 @@ export default function ContactForm({ variant = "contact" }: ContactFormProps) {
 
   if (submitted) {
     return (
-      <div className="text-center py-16">
+      <div className="text-center py-16 glass-panel">
         <CheckCircle2 className="h-14 w-14 text-brand-500 mx-auto mb-4" />
         <h3 className="font-sans text-2xl text-white mb-2">Message envoyé</h3>
         <p className="text-navy-400 text-sm">Nous vous recontacterons sous 24h ouvrées.</p>

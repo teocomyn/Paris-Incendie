@@ -25,7 +25,7 @@ export default function PageHeader({ title, subtitle, image, breadcrumbs }: Page
 
       <div className="container-custom relative z-10 py-14 md:py-16 w-full">
         {breadcrumbs && (
-          <nav aria-label="Fil d'Ariane" className="flex items-center gap-2 text-xs text-navy-400 mb-5">
+          <nav aria-label="Fil d'Ariane" className="flex flex-wrap items-center gap-2 text-xs text-navy-400 mb-5 glass-pill px-4 py-2 w-fit">
             {breadcrumbs.map((crumb, i) => (
               <span key={crumb.label} className="flex items-center gap-2">
                 {i > 0 && <span className="text-navy-600">/</span>}

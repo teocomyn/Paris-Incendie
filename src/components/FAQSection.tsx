@@ -39,11 +39,7 @@ export default function FAQSection() {
               return (
                 <div
                   key={item.question}
-                  className={`border rounded-lg transition-all duration-300 ${
-                    open
-                      ? "border-brand-500/40 bg-brand-500/5 shadow-glow-sm"
-                      : "border-navy-800 bg-navy-900/40"
-                  }`}
+                  className={open ? "glass-accordion-open" : "glass-accordion"}
                 >
                   <button
                     type="button"

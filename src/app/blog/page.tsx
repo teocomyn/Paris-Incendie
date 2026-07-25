@@ -38,21 +38,21 @@ export default function BlogPage() {
                 </div>
                 <div className="card-body">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-bold text-brand-600">{post.category}</span>
+                    <span className="text-xs font-bold text-brand-500 glass-pill px-2.5 py-0.5">{post.category}</span>
                     <span className="text-xs text-navy-400 flex items-center gap-1">
                       <Clock className="h-3 w-3" />{post.readTime}
                     </span>
                   </div>
-                  <h2 className="font-bold text-navy-900 text-sm mb-2 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-brand-600">{post.title}</Link>
+                  <h2 className="font-bold text-white text-sm mb-2 line-clamp-2">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-brand-500">{post.title}</Link>
                   </h2>
-                  <p className="text-xs text-navy-500 line-clamp-2 mb-3">{post.excerpt}</p>
+                  <p className="text-xs text-navy-400 line-clamp-2 mb-3">{post.excerpt}</p>
                   <div className="flex justify-between items-center">
                     <span className="text-xs text-navy-400 flex items-center gap-1">
                       <Calendar className="h-3 w-3" />
                       {new Date(post.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
                     </span>
-                    <Link href={`/blog/${post.slug}`} className="text-xs font-semibold text-brand-600">Lire →</Link>
+                    <Link href={`/blog/${post.slug}`} className="text-xs font-semibold text-brand-500">Lire →</Link>
                   </div>
                 </div>
               </article>

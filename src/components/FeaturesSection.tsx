@@ -17,19 +17,19 @@ export default function FeaturesSection() {
       <div className="grain-overlay" />
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="order-2 lg:order-1 grid grid-cols-12 gap-3">
-            <div className="col-span-7 relative aspect-[3/4] photo-frame bg-navy-800 border-brand-500/20 shadow-glow">
+          <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-12 gap-3">
+            <div className="sm:col-span-7 relative aspect-[3/4] photo-frame bg-navy-800 border-brand-500/20 shadow-glow">
               <Image src={realPhotos.sprinklerAction} alt="Sprinkler en action" fill className="object-cover" sizes="350px" />
             </div>
-            <div className="col-span-5 flex flex-col gap-3">
-              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800">
+            <div className="sm:col-span-5 flex flex-row sm:flex-col gap-3">
+              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800 w-1/2 sm:w-auto">
                 <Image src={realPhotos.sprinklerHead} alt="Tête sprinkler" fill className="object-cover" sizes="200px" />
               </div>
-              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800">
+              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800 w-1/2 sm:w-auto">
                 <Image src={realPhotos.sprinklerAlarm} alt="Poste alarme sprinkler" fill className="object-cover" sizes="200px" />
               </div>
             </div>
-            <div className="col-span-12 relative aspect-[21/9] photo-frame bg-navy-800 border-brand-500/20">
+            <div className="sm:col-span-12 relative aspect-[21/9] photo-frame bg-navy-800 border-brand-500/20">
               <Image src={realPhotos.pumpRoomWide} alt="Salle des pompes" fill className="object-cover" sizes="600px" />
               <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 to-transparent flex items-center">
                 <p className="text-white font-sans font-bold text-xl md:text-2xl px-8 max-w-sm leading-snug">

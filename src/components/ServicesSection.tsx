@@ -43,7 +43,7 @@ export default function ServicesSection() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />
-                <span className="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
+                <span className="absolute top-4 left-4 glass-flame text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-[2]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="absolute bottom-4 left-4 right-4 font-sans font-bold text-xl text-white">

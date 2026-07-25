@@ -30,7 +30,7 @@ export default function BlogPreview() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="700px"
               />
-              <span className="absolute top-4 left-4 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
+              <span className="absolute top-4 left-4 glass-flame text-[10px] font-bold uppercase tracking-widest px-2.5 py-1">
                 {featured.category}
               </span>
             </div>

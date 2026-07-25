@@ -62,7 +62,7 @@ export default function PhotoGallery() {
               <button
                 type="button"
                 onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-navy-950/70 border border-navy-700 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-brand-500/20 hover:border-brand-500/40"
+                className="absolute left-3 top-1/2 -translate-y-1/2 btn-glass-icon opacity-100 lg:opacity-80 lg:hover:opacity-100"
                 aria-label="Photo précédente"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -70,13 +70,13 @@ export default function PhotoGallery() {
               <button
                 type="button"
                 onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-navy-950/70 border border-navy-700 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-brand-500/20 hover:border-brand-500/40"
+                className="absolute right-3 top-1/2 -translate-y-1/2 btn-glass-icon opacity-100 lg:opacity-80 lg:hover:opacity-100"
                 aria-label="Photo suivante"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
 
-              <div className="absolute bottom-0 inset-x-0 p-6">
+              <div className="absolute bottom-0 inset-x-0 glass-subtle rounded-b-2xl p-6 z-[2]">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-500 mb-1">
                   {String(active + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
                 </p>
@@ -108,7 +108,7 @@ export default function PhotoGallery() {
             </div>
 
             {/* Grille mosaïque — aperçu rapide */}
-            <div className="grid grid-cols-4 sm:grid-cols-6 gap-2 mt-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mt-4">
               {photos.slice(0, 12).map((photo, i) => (
                 <button
                   key={`grid-${photo.src}`}

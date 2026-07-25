@@ -30,7 +30,7 @@ export default function DevisPage() {
           </div>
 
           <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 glass-panel p-6 md:p-8">
               <h2 className="font-sans text-2xl text-white mb-4">Comment ça se passe</h2>
               <ol className="space-y-4">
                 {[
@@ -39,8 +39,8 @@ export default function DevisPage() {
                   "Visite sur site si nécessaire",
                   "Devis détaillé conforme aux normes",
                 ].map((step, i) => (
-                  <li key={step} className="flex gap-3 text-sm text-navy-300">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-bold">
+                  <li key={step} className="flex gap-3 text-sm text-navy-300 glass-subtle p-3 rounded-xl">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center glass-flame text-brand-500 text-xs font-bold">
                       {i + 1}
                     </span>
                     {step}

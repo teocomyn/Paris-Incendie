@@ -15,11 +15,11 @@ export default function Footer() {
         <div className="absolute inset-0 bg-hero-glow opacity-50" />
         <div className="grain-overlay" />
         <div className="container-custom relative z-10 h-full flex items-center">
-          <div>
-            <p className="font-sans text-2xl md:text-3xl text-white">
+          <div className="glass-panel p-6 md:p-8 max-w-lg">
+            <p className="font-sans text-xl md:text-2xl text-white">
               Sécurisez vos locaux dès aujourd&apos;hui
             </p>
-            <Link href="/devis" className="inline-block mt-4 text-sm font-bold text-brand-500 hover:text-brand-400 transition-colors">
+            <Link href="/devis" className="inline-block mt-4 btn-flame !text-xs !py-2 !px-4">
               Demander un devis gratuit →
             </Link>
           </div>
@@ -27,7 +27,8 @@ export default function Footer() {
       </div>
 
       <div className="container-custom py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="glass-panel p-8 md:p-10">
+          <div className="relative z-[1] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="inline-block mb-5">
               <Logo variant="full-light" showTagline />
@@ -82,10 +83,11 @@ export default function Footer() {
             </p>
           </div>
         </div>
+        </div>
       </div>
 
-      <div className="border-t border-navy-800">
-        <div className="container-custom py-5 flex flex-col sm:flex-row justify-between gap-3 text-xs">
+      <div className="border-t border-white/5">
+        <div className="container-custom py-5 flex flex-col sm:flex-row justify-between gap-3 text-xs glass-subtle mx-4 mb-4 rounded-2xl px-6">
           <p>&copy; {new Date().getFullYear()} Paris Incendie</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-brand-500 transition-colors">Mentions légales</Link>
