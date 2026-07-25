@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { siteConfig } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Politique de confidentialité",
   description: "Politique de confidentialité et protection des données — Paris Incendie.",
-};
+  path: "/politique-confidentialite",
+  noIndex: true,
+});
 
 export default function PrivacyPage() {
   return (

@@ -1,14 +1,27 @@
 export const siteConfig = {
   name: "Paris Incendie",
   description:
-    "Installation et maintenance sprinkler & RIA en Île-de-France. Agréé APSAD depuis 2012.",
+    "Installateur sprinkler & RIA agréé APSAD en Île-de-France. Étude, installation, maintenance et dépannage 24h/24 depuis 2012.",
   url: "https://www.parisincendie.fr",
   phone: "01 84 80 00 00",
   emergencyPhone: "06 00 00 00 00",
   email: "contact@parisincendie.fr",
   address: "Île-de-France, France",
+  streetAddress: "Île-de-France",
+  addressLocality: "Paris",
+  postalCode: "75000",
   founded: 2012,
-  siret: "[Numéro SIREN]",
+  siret: "[Numéro SIREN — à compléter]",
+  geo: {
+    latitude: 48.8566,
+    longitude: 2.3522,
+  },
+  openingHours: [
+    { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "18:00" },
+  ],
+  sameAs: [
+    "https://www.linkedin.com/company/paris-incendie",
+  ],
 };
 
 export const navigation = [

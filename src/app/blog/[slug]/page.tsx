@@ -3,7 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import CTASection from "@/components/CTASection";
+import StructuredData from "@/components/StructuredData";
 import { blogPosts, getBlogPost } from "@/lib/blog-data";
+import { buildMetadata } from "@/lib/seo";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 
 interface BlogPostPageProps {
@@ -18,7 +21,11 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return { title: "Article non trouvé" };
-  return { title: post.title, description: post.excerpt, openGraph: { title: post.title, description: post.excerpt, images: [{ url: post.image }] } };
+  return buildMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blog/${slug}`,
+  });
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -34,6 +41,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
+      <StructuredData
+        data={[
+          getArticleSchema(post),
+          getBreadcrumbSchema([
+            { name: "Accueil", url: "/" },
+            { name: "Blog", url: "/blog" },
+            { name: post.title },
+          ]),
+        ]}
+      />
       <article>
         <div className="relative h-[40vh] min-h-[280px]">
           <Image src={post.image} alt={post.title} fill className="object-cover" priority sizes="100vw" />
@@ -52,6 +69,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
         <div className="section-padding">
           <div className="container-custom max-w-3xl glass-panel p-8 md:p-10" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          <div className="container-custom max-w-3xl mt-8 text-center">
+            <Link href="/devis" className="btn-flame">Demander un devis gratuit</Link>
+          </div>
         </div>
       </article>
       <CTASection showImage={false} />

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
 import { serviceImages } from "@/lib/images";
+import { serviceIdToSlug } from "@/lib/service-pages";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function ServicesSection() {
@@ -33,7 +34,7 @@ export default function ServicesSection() {
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <ScrollReveal key={service.id} delay={index * 60}>
-              <Link href={`/services#${service.id}`} className="card group block h-full">
+              <Link href={`/services/${serviceIdToSlug[service.id] ?? service.id}`} className="card group block h-full">
                 <div className="relative aspect-[16/9] overflow-hidden bg-navy-800">
                   <Image
                     src={serviceImages[service.id]}

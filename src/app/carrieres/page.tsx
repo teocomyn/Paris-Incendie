@@ -7,10 +7,14 @@ import { careers } from "@/lib/data";
 import { images } from "@/lib/images";
 import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Carrières",
-  description: "Rejoignez Paris Incendie — technicien sprinkler, chef de projet, RIA. Île-de-France.",
-};
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Carrières — technicien sprinkler & RIA",
+  description:
+    "Rejoignez Paris Incendie — technicien sprinkler, chef de projet, RIA. CDI en Île-de-France. Installateur agréé APSAD.",
+  path: "/carrieres",
+});
 
 export default function CarrieresPage() {
   return (

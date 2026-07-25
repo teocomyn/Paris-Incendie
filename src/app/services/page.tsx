@@ -1,18 +1,31 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
+import StructuredData from "@/components/StructuredData";
 import { services } from "@/lib/data";
 import { images, realPhotos, serviceImages } from "@/lib/images";
+import { buildMetadata } from "@/lib/seo";
+import { serviceIdToSlug } from "@/lib/service-pages";
+import { getBreadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Installation sprinkler SPK, RIA, colonnes sèches, mise en conformité APSAD et maintenance — Paris Incendie.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Services sprinkler & RIA — installateur APSAD IDF",
+  description:
+    "Installateur sprinkler & RIA agréé APSAD en Île-de-France. Étude, pose, essais et maintenance. Devis gratuit sous 24h. ☎ 01 84 80 00 00.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (
     <>
+      <StructuredData
+        data={getBreadcrumbSchema([
+          { name: "Accueil", url: "/" },
+          { name: "Services" },
+        ])}
+      />
       <PageHeader
         title="Nos services"
         subtitle="Étude, installation, essais, mise en conformité et contrats d'entretien."
@@ -39,13 +52,18 @@ export default function ServicesPage() {
                   <span className="text-xs font-bold text-brand-500 glass-pill px-2.5 py-0.5">{String(index + 1).padStart(2, "0")}</span>
                   <h2 className="font-sans font-bold text-2xl md:text-3xl text-white mt-1 mb-4">{service.title}</h2>
                   <p className="text-navy-300 text-sm leading-relaxed mb-6">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((f) => (
                       <li key={f} className="flex gap-2 text-sm text-navy-200">
                         <span className="text-brand-500 font-bold">—</span>{f}
                       </li>
                     ))}
                   </ul>
+                  {serviceIdToSlug[service.id] && (
+                    <Link href={`/services/${serviceIdToSlug[service.id]}`} className="text-link">
+                      Voir la page {service.title} →
+                    </Link>
+                  )}
                 </div>
               </div>
             );

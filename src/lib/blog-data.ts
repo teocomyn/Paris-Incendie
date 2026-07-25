@@ -330,6 +330,180 @@ NF EN 12845, NFPA 13, FM Global Data Sheets : les normes que nous appliquons à 
 Demandez toujours les certificats de conformité et les rapports de vérification après chaque intervention.
     `,
   },
+  {
+    slug: "cout-installation-sprinkler-entrepot",
+    title: "Coût installation sprinkler entrepôt 5000 m² : guide 2026",
+    excerpt:
+      "Fourchettes de prix, facteurs de coût et postes budgétaires pour équiper un entrepôt logistique en sprinkler conforme NF EN 12845.",
+    date: "2026-04-01",
+    readTime: "9 min",
+    category: "Guide",
+    image: blogImages[2],
+    content: `
+## Quels facteurs influencent le coût ?
+
+Surface, hauteur sous plafond, type de stockage (haut-risque ou non), présence d'une salle des pompes, compartimentage et niveau de certification exigé (APSAD, FM Global).
+
+## Fourchette indicative
+
+Pour un entrepôt de 5 000 m² en IDF, comptez un investissement significativement variable selon la densité de couverture. Seule une étude sur site permet un chiffrage fiable.
+
+## Postes de dépense
+
+Étude d'exécution, tuyauterie et têtes sprinkler, groupe de surpression, centrale de contrôle, alarmes, essais et mise en service, puis contrat de maintenance semestriel.
+
+## Demander un devis
+
+Paris Incendie réalise des devis détaillés sous 24h ouvrées. Visite sur site incluse si nécessaire.
+    `,
+  },
+  {
+    slug: "sprinkler-obligatoire-erp-2026",
+    title: "Sprinkler obligatoire ERP : quelles règles en 2026 ?",
+    excerpt:
+      "ERP, IGH, entrepôts : panorama des obligations sprinkler en vigueur et des évolutions réglementaires à connaître.",
+    date: "2026-03-22",
+    readTime: "11 min",
+    category: "Réglementation",
+    image: blogImages[3],
+    content: `
+## ERP et sprinkler
+
+Selon la catégorie, la capacité d'accueil et la nature de l'activité, l'ERP peut être soumis à l'installation d'un système de sécurité incendie automatique.
+
+## IGH et bâtiments tertiaires
+
+Les immeubles de grande hauteur et certains bâtiments tertiaires neufs ou réhabilités doivent intégrer des solutions adaptées au compartimentage.
+
+## Entrepôts et logistique
+
+Les surfaces de stockage importantes sont fréquemment concernées. Un audit réglementaire préalable est indispensable.
+
+## Accompagnement Paris Incendie
+
+Nous réalisons le diagnostic réglementaire et proposons la solution technique conforme APSAD et NF EN 12845.
+    `,
+  },
+  {
+    slug: "sprinkler-vs-ria-differences",
+    title: "Sprinkler vs RIA : quelle protection incendie choisir ?",
+    excerpt:
+      "Comparatif sprinkler automatique et RIA : fonctionnement, coûts, obligations et complémentarité pour votre bâtiment.",
+    date: "2026-03-18",
+    readTime: "8 min",
+    category: "Guide",
+    image: blogImages[4],
+    content: `
+## Sprinkler : extinction automatique
+
+Réseau sous pression, déclenchement thermique tête par tête, extinction localisée. Idéal pour limiter les dégâts et agir sans intervention humaine.
+
+## RIA : première intervention manuelle
+
+Le Robinet Incendie Armé permet à du personnel formé d'attaquer un feu naissant. Obligatoire dans de nombreux ERP.
+
+## Faut-il choisir l'un ou l'autre ?
+
+Souvent les deux systèmes coexistent. Le sprinkler protège en automatique ; le RIA complète pour l'intervention humaine immédiate.
+
+## Notre recommandation
+
+Faites auditer votre bâtiment par un installateur agréé APSAD pour définir la solution adaptée à votre activité et à votre assureur.
+    `,
+  },
+  {
+    slug: "certification-apsad-r4-garanties",
+    title: "Certification APSAD R4 : ce que ça garantit",
+    excerpt:
+      "Installateur agréé APSAD R4 : compétences, contrôles, traçabilité et avantages pour vos projets sprinkler.",
+    date: "2026-03-10",
+    readTime: "7 min",
+    category: "Réglementation",
+    image: blogImages[5],
+    content: `
+## Qu'est-ce que l'APSAD ?
+
+Assemblée Plénière des Sociétés d'Assurances Dommages — elle certifie les installateurs et contrôle la qualité des installations.
+
+## La certification R4
+
+Elle couvre les installateurs sprinkler. Elle garantit que l'entreprise respecte des exigences strictes de compétence et de traçabilité.
+
+## Avantages pour le maître d'ouvrage
+
+Installations reconnues par les assureurs, rapports de conformité, maintenance encadrée et recours à des matériaux agréés.
+
+## Paris Incendie agréé APSAD
+
+Nous sommes installateur agréé APSAD R4 et R5 (RIA) en Île-de-France depuis 2012.
+    `,
+  },
+  {
+    slug: "maintenance-sprinkler-obligations-legales",
+    title: "Maintenance sprinkler : fréquence et obligations légales",
+    excerpt:
+      "Visites semestrielles, registre de sécurité, responsabilités employeur : tout savoir sur l'entretien sprinkler.",
+    date: "2026-02-28",
+    readTime: "9 min",
+    category: "Maintenance",
+    image: blogImages[6],
+    content: `
+## Obligation d'entretien
+
+Un système sprinkler doit être maintenu en état de fonctionnement permanent. L'employeur reste responsable de la sécurité des occupants.
+
+## Fréquence semestrielle
+
+La norme NF EN 12845 et les règles APSAD imposent des vérifications tous les 6 mois par un installateur agréé.
+
+## Contenu des visites
+
+Contrôle des vannes, alarmes, pression, poste de contrôle, essais partiels et rapport de vérification.
+
+## Contrat de maintenance Paris Incendie
+
+Visites programmées, astreinte 24h/24, pièces agréées et traçabilité complète pour vos audits assureur et HSE.
+    `,
+  },
+  {
+    slug: "installateur-sprinkler-paris-comment-choisir",
+    title: "Installateur sprinkler Paris : comment choisir ?",
+    excerpt:
+      "7 critères pour sélectionner un installateur sprinkler fiable à Paris et en Île-de-France.",
+    date: "2026-02-15",
+    readTime: "10 min",
+    category: "Guide",
+    image: blogImages[7],
+    content: `
+## 1. Agrément APSAD
+
+Exigez la certification R4 à jour. C'est la garantie d'une installation reconnue par les assureurs.
+
+## 2. Bureau d'études intégré
+
+Un installateur avec bureau d'études maîtrise la chaîne complète, de la note de calcul à la pose.
+
+## 3. Références locales
+
+Demandez des projets similaires en IDF : entrepôts, tertiaire, commerce.
+
+## 4. Contrat de maintenance
+
+La maintenance semestrielle est obligatoire. Privilégiez un partenaire unique installation + SAV.
+
+## 5. Astreinte dépannage
+
+Une fuite ou une alarme un week-end ne peut pas attendre lundi. Vérifiez l'astreinte 24h/24.
+
+## 6. Délais et méthode
+
+Étude, préfabrication, pose, essais : un processus clair limite les surprises.
+
+## 7. Devis détaillé
+
+Un devis conforme détaille les postes, les normes applicables et les délais. Paris Incendie répond sous 24h.
+    `,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

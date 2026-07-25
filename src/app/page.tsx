@@ -13,7 +13,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <CertificationsBar />
       <ServicesSection />
       <ProcessSection />
       <PhotoGallery />
@@ -22,6 +21,7 @@ export default function HomePage() {
       <FAQSection />
       <BlogPreview />
       <CTASection />
+      <CertificationsBar />
     </>
   );
 }

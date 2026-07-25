@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import { siteConfig } from "@/lib/data";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Mentions légales",
-  description: "Mentions légales du site Paris Incendie.",
-};
+  description: "Mentions légales du site Paris Incendie — installateur sprinkler & RIA.",
+  path: "/mentions-legales",
+  noIndex: true,
+});
 
 export default function MentionsLegalesPage() {
   return (

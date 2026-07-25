@@ -3,11 +3,14 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import { images, realPhotos } from "@/lib/images";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Demande de devis",
-  description: "Devis gratuit pour installation sprinkler, RIA, mise en conformité ou maintenance.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Devis gratuit sprinkler & RIA — réponse 24h",
+  description:
+    "Demandez un devis gratuit pour installation sprinkler, RIA, mise en conformité ou maintenance en Île-de-France. Réponse sous 24h ouvrées.",
+  path: "/devis",
+});
 
 export default function DevisPage() {
   return (

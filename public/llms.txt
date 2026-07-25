@@ -1,0 +1,35 @@
+# Paris Incendie — llms.txt
+# https://www.parisincendie.fr
+
+> Installateur sprinkler (SPK) et RIA agréé APSAD en Île-de-France depuis 2012.
+
+## Entreprise
+- Nom : Paris Incendie
+- Site : https://www.parisincendie.fr
+- Zone : Île-de-France (Paris, 92, 93, 94, 77, 78, 91, 95)
+- Fondée : 2012
+- Certification : APSAD (installateur agréé R4/R5)
+- Téléphone : 01 84 80 00 00
+- Astreinte 24h/24 : 06 00 00 00 00
+- Email : contact@parisincendie.fr
+
+## Services
+- Installation sprinkler SPK (NF EN 12845, FM Global, NFPA)
+- Installation RIA — Robinet Incendie Armé (NF S 61-919)
+- Poteaux incendie et colonnes sèches/humides
+- Mise en conformité APSAD
+- Maintenance préventive semestrielle
+- Dépannage urgence 24h/24
+- Bureau d'études et conception
+
+## Pages clés
+- Accueil : https://www.parisincendie.fr/
+- Services : https://www.parisincendie.fr/services
+- Devis gratuit : https://www.parisincendie.fr/devis
+- Contact : https://www.parisincendie.fr/contact
+- Sprinkler Paris : https://www.parisincendie.fr/installation-sprinkler-paris
+- RIA IDF : https://www.parisincendie.fr/ria-ile-de-france
+- Blog : https://www.parisincendie.fr/blog
+
+## Normes
+NF EN 12845, NF S 61-919, NFPA 13, FM Global, APSAD R4/R5

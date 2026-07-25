@@ -6,12 +6,15 @@ import CTASection from "@/components/CTASection";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/lib/data";
 import { images, realPhotos } from "@/lib/images";
+import { buildMetadata } from "@/lib/seo";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contactez Paris Incendie — ${siteConfig.phone}`,
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Contact — installateur APSAD Île-de-France",
+  description:
+    `Contactez Paris Incendie — ${siteConfig.phone}. Devis, projet ou urgence sprinkler/RIA. Réponse sous 24h. Astreinte 24h/24.`,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

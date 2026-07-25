@@ -82,7 +82,7 @@ export default function Hero() {
                     i === 1 ? "aspect-[3/4] -mt-4" : "aspect-square"
                   }`}
                 >
-                  <Image src={src} alt="" fill className="object-cover" sizes="120px" />
+                  <Image src={src} alt={`Installation sprinkler Paris Incendie — photo ${i + 1}`} fill className="object-cover" sizes="120px" />
                 </div>
               ))}
             </div>

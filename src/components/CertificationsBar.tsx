@@ -19,7 +19,7 @@ const stats = [
 
 export default function CertificationsBar() {
   return (
-    <section className="relative py-4 md:py-5">
+    <section className="relative pt-4 pb-10 md:pt-5 md:pb-14">
       <div className="container-custom">
         <ScrollReveal>
           <div className="glass-panel px-5 py-5 md:px-8 md:py-6">

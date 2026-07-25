@@ -4,11 +4,14 @@ import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { references } from "@/lib/data";
 import { images, referenceImages } from "@/lib/images";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Références",
-  description: "Projets sprinkler et RIA réalisés par Paris Incendie en Île-de-France — industrie, tertiaire, logistique.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Références — 500+ projets sprinkler & RIA IDF",
+  description:
+    "Projets sprinkler et RIA réalisés par Paris Incendie en Île-de-France — industrie, tertiaire, logistique, commerce. Installateur agréé APSAD.",
+  path: "/references",
+});
 
 /** Grille bas de page — photos uniques, différentes de l'en-tête et des fiches */
 const refGallery = images.refGallery;

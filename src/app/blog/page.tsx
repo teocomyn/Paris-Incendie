@@ -4,13 +4,16 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { blogPosts } from "@/lib/blog-data";
+import { buildMetadata } from "@/lib/seo";
 import { Calendar, Clock } from "lucide-react";
 import { images } from "@/lib/images";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Conseils sécurité incendie, sprinkler, RIA, normes APSAD — Paris Incendie.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Blog sécurité incendie — sprinkler, RIA, normes APSAD",
+  description:
+    "Conseils sécurité incendie, sprinkler, RIA, normes APSAD et maintenance — articles par les experts Paris Incendie.",
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (
