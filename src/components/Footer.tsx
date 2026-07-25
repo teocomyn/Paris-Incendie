@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="relative z-[1] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <div>
               <Link href="/" className="pointer-events-auto inline-block mb-5">
-                <Logo variant="full-light" showTagline />
+                <Logo variant="full-light" className="h-14 md:h-[4.25rem] w-auto" />
               </Link>
               <p className="text-sm leading-relaxed">
                 Installation et maintenance sprinkler (SPK) et RIA.

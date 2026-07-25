@@ -17,7 +17,7 @@ export function getOrganizationSchema() {
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.svg`,
+    logo: `${siteConfig.url}/logo.png`,
     foundingDate: String(siteConfig.founded),
     email: siteConfig.email,
     telephone: siteConfig.phone,
@@ -141,7 +141,7 @@ export function getArticleSchema(post: {
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
-      logo: { "@type": "ImageObject", url: `${siteConfig.url}/logo.svg` },
+      logo: { "@type": "ImageObject", url: `${siteConfig.url}/logo.png` },
     },
     image: post.image.startsWith("http") ? post.image : `${siteConfig.url}${post.image}`,
     mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
