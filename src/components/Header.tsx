@@ -29,9 +29,18 @@ export default function Header() {
       }`}
     >
       <div className="container-custom relative z-[1]">
-        <div className="flex h-[60px] md:h-[76px] items-center justify-between gap-3">
-          <Link href="/" className="shrink-0 transition-opacity hover:opacity-90 flex items-center">
-            <Logo variant="full-light" className="h-12 w-auto sm:h-[3.25rem] md:h-14" />
+        <div className="relative flex h-[60px] md:h-[76px] items-center justify-between gap-3">
+          {/* Logo mobile — centré */}
+          <Link
+            href="/"
+            className="lg:hidden absolute left-1/2 top-1/2 z-[1] -translate-x-1/2 -translate-y-1/2 transition-opacity hover:opacity-90"
+          >
+            <Logo variant="full-light" className="h-10 w-auto max-w-[min(56vw,13rem)] sm:h-11" />
+          </Link>
+
+          {/* Logo desktop — gauche */}
+          <Link href="/" className="hidden lg:flex shrink-0 transition-opacity hover:opacity-90 items-center">
+            <Logo variant="full-light" className="h-12 w-auto md:h-14" />
           </Link>
 
           <nav className="hidden lg:flex items-center glass-pill px-1.5 py-1">
@@ -70,7 +79,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="lg:hidden btn-glass-icon"
+            className="lg:hidden relative z-[2] ml-auto btn-glass-icon shrink-0"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileOpen}
