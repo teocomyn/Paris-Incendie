@@ -34,14 +34,14 @@ export default function Header() {
             <Logo variant="full-light" showTagline />
           </Link>
 
-          <nav className="hidden xl:flex items-center glass-pill px-2 py-1">
+          <nav className="hidden lg:flex items-center glass-pill px-1.5 py-1">
             {navigation.map((item) => {
               const active = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 ${
+                  className={`relative px-3 xl:px-4 py-2 text-xs xl:text-sm font-semibold rounded-full transition-all duration-300 ${
                     active
                       ? "text-brand-500 bg-brand-500/10"
                       : "text-navy-300 hover:text-white hover:bg-white/5"
@@ -53,10 +53,10 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
             <a
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-              className="hidden xl:flex items-center gap-2 text-sm font-bold text-navy-100 hover:text-brand-500 transition-colors glass-pill px-3 py-2"
+              className="hidden lg:flex items-center gap-2 text-xs xl:text-sm font-bold text-navy-100 hover:text-brand-500 transition-colors glass-pill px-2 xl:px-3 py-2"
             >
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-500/15 border border-brand-500/25">
                 <Phone className="h-3.5 w-3.5 text-brand-500" />
@@ -70,7 +70,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="xl:hidden btn-glass-icon"
+            className="lg:hidden btn-glass-icon"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileOpen}
@@ -81,7 +81,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="xl:hidden glass-strong border-t border-white/10 relative z-[1]">
+        <div className="lg:hidden glass-strong border-t border-white/10 relative z-[1]">
           <nav className="container-custom py-5 flex flex-col gap-1">
             {navigation.map((item) => (
               <Link

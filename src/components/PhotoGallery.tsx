@@ -2,129 +2,128 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { images, galleryCaptions } from "@/lib/images";
+import { useState, useMemo } from "react";
+import { Expand, ArrowUpRight } from "lucide-react";
+import {
+  galleryItems,
+  galleryCategoryLabels,
+  type GalleryCategory,
+} from "@/lib/images";
+import Lightbox from "@/components/Lightbox";
+import ScrollReveal from "@/components/ScrollReveal";
 
-const photos = images.gallery.map((src, i) => ({
-  src,
-  alt: galleryCaptions[i] ?? `Installation ${i + 1}`,
-  caption: galleryCaptions[i] ?? `Installation ${i + 1}`,
-}));
+const FILTERS: (GalleryCategory | "all")[] = ["all", "sprinkler", "ria", "pompes", "chantier", "reseau"];
+
+const HOME_PREVIEW_COUNT = 9;
 
 export default function PhotoGallery() {
-  const [active, setActive] = useState(0);
-  const thumbsRef = useRef<HTMLDivElement>(null);
+  const [filter, setFilter] = useState<GalleryCategory | "all">("all");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const prev = () => setActive((i) => (i === 0 ? photos.length - 1 : i - 1));
-  const next = () => setActive((i) => (i === photos.length - 1 ? 0 : i + 1));
+  const filtered = useMemo(
+    () => (filter === "all" ? galleryItems : galleryItems.filter((p) => p.category === filter)),
+    [filter]
+  );
 
-  useEffect(() => {
-    const el = thumbsRef.current?.children[active] as HTMLElement | undefined;
-    el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-  }, [active]);
+  const preview = filtered.slice(0, HOME_PREVIEW_COUNT);
+
+  const openLightbox = (indexInFiltered: number) => setLightboxIndex(indexInFiltered);
+  const closeLightbox = () => setLightboxIndex(null);
 
   return (
-    <section className="section-padding section-dark">
-      <div className="glow-orb glow-orb-flame w-[500px] h-[400px] bottom-0 right-0 opacity-40" />
+    <section className="section-padding section-immersive">
+      <div className="glow-orb glow-orb-flame w-[500px] h-[400px] bottom-0 right-0 opacity-30" />
       <div className="grain-overlay" />
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div className="lg:col-span-4 lg:sticky lg:top-28">
-            <p className="section-label !text-brand-500 before:!bg-brand-500">Nos installations</p>
-            <h2 className="font-sans font-bold text-3xl md:text-4xl text-white leading-tight mb-4">
-              {photos.length} réalisations en images
-            </h2>
-            <p className="text-navy-400 text-sm leading-relaxed mb-6">
-              Sprinkler, RIA, salles des pompes, chantiers et réseaux —
-              du matériel conforme NF EN 12845 et APSAD, posé par nos équipes.
-            </p>
-            <Link href="/references" className="btn-ghost-light text-sm">
-              Voir nos références →
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+            <div className="max-w-xl">
+              <p className="section-label">Nos installations</p>
+              <h2 className="section-title">30 réalisations en images</h2>
+              <p className="text-navy-300 text-sm leading-relaxed mt-4">
+                Sprinkler, RIA, salles des pompes, chantiers et réseaux — matériel conforme NF EN 12845 et APSAD.
+              </p>
+            </div>
+            <Link href="/references" className="btn-secondary shrink-0 self-start">
+              Toutes les références
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
+        </ScrollReveal>
 
-          <div className="lg:col-span-8">
-            {/* Image principale */}
-            <div className="relative aspect-[16/10] photo-frame mb-4 bg-navy-800 border-brand-500/20 shadow-glow group">
-              <Image
-                src={photos[active].src}
-                alt={photos[active].alt}
-                fill
-                className="object-cover transition-opacity duration-300"
-                sizes="800px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/95 via-transparent to-transparent" />
-
-              {/* Navigation */}
+        {/* Filtres */}
+        <ScrollReveal delay={80}>
+          <div className="flex flex-wrap gap-2 mb-8">
+            {FILTERS.map((f) => (
               <button
+                key={f}
                 type="button"
-                onClick={prev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 btn-glass-icon opacity-100 lg:opacity-80 lg:hover:opacity-100"
-                aria-label="Photo précédente"
+                onClick={() => setFilter(f)}
+                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-300 ${
+                  filter === f
+                    ? "glass-flame text-white"
+                    : "glass-subtle text-navy-400 hover:text-white"
+                }`}
               >
-                <ChevronLeft className="h-5 w-5" />
+                {f === "all" ? "Tout" : galleryCategoryLabels[f]}
               </button>
-              <button
-                type="button"
-                onClick={next}
-                className="absolute right-3 top-1/2 -translate-y-1/2 btn-glass-icon opacity-100 lg:opacity-80 lg:hover:opacity-100"
-                aria-label="Photo suivante"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-
-              <div className="absolute bottom-0 inset-x-0 glass-subtle rounded-b-2xl p-6 z-[2]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-500 mb-1">
-                  {String(active + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
-                </p>
-                <p className="text-white font-semibold text-lg">{photos[active].caption}</p>
-              </div>
-            </div>
-
-            {/* Vignettes scrollables — 30 photos */}
-            <div
-              ref={thumbsRef}
-              className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-navy-700 scrollbar-track-transparent"
-            >
-              {photos.map((photo, i) => (
-                <button
-                  key={photo.src}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  className={`relative shrink-0 w-20 h-20 overflow-hidden rounded-md bg-navy-800 transition-all ${
-                    active === i
-                      ? "ring-2 ring-brand-500 ring-offset-2 ring-offset-navy-950 opacity-100 shadow-glow-sm"
-                      : "opacity-40 hover:opacity-70 border border-navy-800"
-                  }`}
-                  aria-label={photo.caption}
-                  aria-current={active === i}
-                >
-                  <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="80px" />
-                </button>
-              ))}
-            </div>
-
-            {/* Grille mosaïque — aperçu rapide */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mt-4">
-              {photos.slice(0, 12).map((photo, i) => (
-                <button
-                  key={`grid-${photo.src}`}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  className={`relative aspect-square overflow-hidden rounded-md photo-frame transition-all ${
-                    active === i ? "ring-2 ring-brand-500" : "opacity-60 hover:opacity-100"
-                  }`}
-                >
-                  <Image src={photo.src} alt={photo.alt} fill className="object-cover" sizes="100px" />
-                </button>
-              ))}
-            </div>
+            ))}
           </div>
+        </ScrollReveal>
+
+        {/* Grille */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          {preview.map((photo, i) => (
+            <ScrollReveal key={photo.src} delay={i * 60} className={i === 0 ? "md:col-span-2 md:row-span-2" : ""}>
+              <button
+                type="button"
+                onClick={() => openLightbox(i)}
+                className={`group relative w-full photo-frame overflow-hidden bg-navy-900 text-left ${
+                  i === 0 ? "aspect-[16/10] md:aspect-auto md:min-h-[340px]" : "aspect-square"
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes={i === 0 ? "600px" : "300px"}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-3 left-3 glass-pill px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-400">
+                  {galleryCategoryLabels[photo.category]}
+                </div>
+                <div className="absolute bottom-0 inset-x-0 p-4 flex items-end justify-between gap-2">
+                  <p className="text-white text-xs md:text-sm font-semibold line-clamp-2">{photo.caption}</p>
+                  <span className="btn-glass-icon !h-8 !w-8 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Expand className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </button>
+            </ScrollReveal>
+          ))}
         </div>
+
+        {filtered.length > HOME_PREVIEW_COUNT && (
+          <ScrollReveal delay={200}>
+            <div className="mt-8 text-center">
+              <Link href="/references" className="btn-outline">
+                Voir les {filtered.length} photos {filter !== "all" ? `— ${galleryCategoryLabels[filter]}` : ""}
+              </Link>
+            </div>
+          </ScrollReveal>
+        )}
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          photos={filtered}
+          index={lightboxIndex}
+          onClose={closeLightbox}
+          onChange={setLightboxIndex}
+        />
+      )}
     </section>
   );
 }

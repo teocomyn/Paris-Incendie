@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { images, realPhotos } from "@/lib/images";
+import { sectionPhotos } from "@/lib/images";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function FeaturesSection() {
+  const [main, sideA, sideB, wide] = sectionPhotos.features;
+
   const points = [
     "Études d'exécution par bureau intégré",
     "Préfabrication et pose par équipes habilitées",
@@ -13,33 +16,37 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="section-padding section-dark">
-      <div className="grain-overlay" />
+    <section className="section-padding relative overflow-hidden">
+      {/* Full-bleed photo band — respiration visuelle sans glass */}
+      <div className="photo-bleed relative mb-16 md:mb-20">
+        <Image src={wide} alt="Salle des pompes conforme NF EN" fill className="object-cover opacity-40" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/70 to-navy-950/40" />
+        <div className="container-custom relative z-10 h-full min-h-[280px] flex items-center py-16">
+          <ScrollReveal>
+            <p className="font-sans font-bold text-2xl md:text-4xl text-white max-w-lg leading-snug">
+              Salles des pompes & groupes surpresseurs conformes NF EN
+            </p>
+          </ScrollReveal>
+        </div>
+      </div>
+
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-12 gap-3">
-            <div className="sm:col-span-7 relative aspect-[3/4] photo-frame bg-navy-800 border-brand-500/20 shadow-glow">
-              <Image src={realPhotos.sprinklerAction} alt="Sprinkler en action" fill className="object-cover" sizes="350px" />
+          <ScrollReveal className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-12 gap-3">
+            <div className="sm:col-span-7 relative aspect-[3/4] photo-frame border-brand-500/20 shadow-glow">
+              <Image src={main} alt="Réseau sprinkler" fill className="object-cover" sizes="350px" />
             </div>
             <div className="sm:col-span-5 flex flex-row sm:flex-col gap-3">
-              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800 w-1/2 sm:w-auto">
-                <Image src={realPhotos.sprinklerHead} alt="Tête sprinkler" fill className="object-cover" sizes="200px" />
+              <div className="relative flex-1 photo-frame min-h-[120px] w-1/2 sm:w-auto">
+                <Image src={sideA} alt="Installation sprinkler" fill className="object-cover" sizes="200px" />
               </div>
-              <div className="relative flex-1 photo-frame min-h-[120px] bg-navy-800 w-1/2 sm:w-auto">
-                <Image src={realPhotos.sprinklerAlarm} alt="Poste alarme sprinkler" fill className="object-cover" sizes="200px" />
-              </div>
-            </div>
-            <div className="sm:col-span-12 relative aspect-[21/9] photo-frame bg-navy-800 border-brand-500/20">
-              <Image src={realPhotos.pumpRoomWide} alt="Salle des pompes" fill className="object-cover" sizes="600px" />
-              <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 to-transparent flex items-center">
-                <p className="text-white font-sans font-bold text-xl md:text-2xl px-8 max-w-sm leading-snug">
-                  Salles des pompes & groupes surpresseurs conformes NF EN
-                </p>
+              <div className="relative flex-1 photo-frame min-h-[120px] w-1/2 sm:w-auto">
+                <Image src={sideB} alt="Tête sprinkler" fill className="object-cover" sizes="200px" />
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="order-1 lg:order-2">
+          <ScrollReveal className="order-1 lg:order-2" delay={100}>
             <p className="section-label">Pourquoi nous choisir</p>
             <h2 className="section-title mb-2">
               Un installateur agréé, de l&apos;étude à la maintenance
@@ -50,7 +57,7 @@ export default function FeaturesSection() {
               dans leurs projets SPK et RIA avec des moyens techniques et humains
               adaptés aux sites en production.
             </p>
-            <ul className="space-y-3.5 mb-10">
+            <ul className="space-y-3 mb-10">
               {points.map((point) => (
                 <li key={point} className="flex gap-3 text-sm text-navy-200">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-500 text-white text-[10px] font-bold mt-0.5">
@@ -63,7 +70,7 @@ export default function FeaturesSection() {
             <Link href="/a-propos" className="btn-flame">
               Découvrir l&apos;entreprise
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

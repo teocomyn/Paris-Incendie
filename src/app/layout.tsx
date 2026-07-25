@@ -15,14 +15,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: seoKeywords,
-  openGraph: {
+    openGraph: {
     type: "website",
     locale: "fr_FR",
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Installation Sprinkler & RIA`,
     description: siteConfig.description,
-    images: [{ url: "/logo.svg", width: 220, height: 48, alt: siteConfig.name }],
   },
   robots: { index: true, follow: true },
   icons: {

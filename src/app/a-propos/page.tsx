@@ -3,7 +3,7 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CTASection from "@/components/CTASection";
 import { siteConfig, values } from "@/lib/data";
-import { images, realPhotos } from "@/lib/images";
+import { images, realPhotos, sectionPhotos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -61,7 +61,7 @@ export default function AboutPage() {
               <div key={value.title} className="card card-body text-center">
                 <div className="relative h-32 rounded-md overflow-hidden mb-4 -mx-6 -mt-6">
                   <Image
-                    src={[images.industrial, images.safety, images.team, images.control][i]}
+                    src={sectionPhotos.values[i]}
                     alt={value.title}
                     fill
                     className="object-cover"

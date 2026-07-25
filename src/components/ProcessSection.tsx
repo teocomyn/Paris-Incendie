@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { processImages } from "@/lib/images";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const steps = [
   {
@@ -36,40 +37,43 @@ export default function ProcessSection() {
       <div className="grain-overlay" />
 
       <div className="container-custom relative z-10">
-        <div className="max-w-2xl mb-14">
-          <p className="section-label">Notre méthode</p>
-          <h2 className="section-title">Du diagnostic à la maintenance</h2>
-          <p className="section-subtitle">
-            Un processus maîtrisé pour chaque projet SPK et RIA — sans surprise,
-            avec traçabilité complète.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="max-w-2xl mb-14">
+            <p className="section-label">Notre méthode</p>
+            <h2 className="section-title">Du diagnostic à la maintenance</h2>
+            <p className="section-subtitle">
+              Un processus maîtrisé pour chaque projet SPK et RIA — sans surprise,
+              avec traçabilité complète.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="space-y-0">
           {steps.map((step, i) => (
-            <div
-              key={step.num}
-              className={`grid lg:grid-cols-12 gap-6 lg:gap-10 items-center py-10 ${
-                i < steps.length - 1 ? "border-b border-navy-800/80" : ""
-              }`}
-            >
-              <div className="lg:col-span-1">
-                <span className="font-sans text-4xl text-brand-500/25">{step.num}</span>
+            <ScrollReveal key={step.num} delay={i * 80}>
+              <div
+                className={`grid lg:grid-cols-12 gap-6 lg:gap-10 items-center py-10 ${
+                  i < steps.length - 1 ? "border-b border-white/8" : ""
+                }`}
+              >
+                <div className="lg:col-span-1">
+                  <span className="font-sans text-4xl text-brand-500/25">{step.num}</span>
+                </div>
+                <div className="lg:col-span-4 relative aspect-[16/10] photo-frame border-brand-500/10">
+                  <Image
+                    src={processImages[i]}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
+                    sizes="400px"
+                  />
+                </div>
+                <div className={`lg:col-span-7 ${i % 2 === 0 ? "glass-panel p-6 md:p-8" : "p-2 md:p-4"}`}>
+                  <h3 className="font-sans font-bold text-2xl text-white mb-3">{step.title}</h3>
+                  <p className="text-navy-300 leading-relaxed max-w-lg">{step.desc}</p>
+                </div>
               </div>
-              <div className="lg:col-span-4 relative aspect-[16/10] photo-frame border-brand-500/10">
-                <Image
-                  src={processImages[i]}
-                  alt={step.title}
-                  fill
-                  className="object-cover"
-                  sizes="400px"
-                />
-              </div>
-              <div className="lg:col-span-7 glass-panel p-6 md:p-8">
-                <h3 className="font-sans font-bold text-2xl text-white mb-3">{step.title}</h3>
-                <p className="text-navy-300 leading-relaxed max-w-lg">{step.desc}</p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

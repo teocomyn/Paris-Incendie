@@ -136,41 +136,51 @@ export const testimonials = [
     name: "Nicolas Perrin",
     role: "Responsable Industriel",
     company: "Site de production — Seine-et-Marne",
+    project: "SPK · 8 000 m² · 2024",
     content:
       "Installation sprinkler sur 8 000 m² réalisée sans arrêt de production. Rapport APSAD conforme, équipe réactive du début à la mise en service.",
     rating: 5,
+    photoIndex: 0,
   },
   {
     name: "Laura Mercier",
     role: "Directrice de Site",
     company: "Centre commercial — Val-de-Marne",
+    project: "RIA + SPK · 5 semaines",
     content:
       "Pose du réseau RIA et extension SPK en 5 semaines. L'équipe a géré les contraintes d'ouverture au public et les accès techniques.",
     rating: 5,
+    photoIndex: 1,
   },
   {
     name: "Marc Dupont",
     role: "Gérant",
     company: "PME logistique — Essonne",
+    project: "Maintenance · 3 ans",
     content:
       "Contrat de maintenance semestriel depuis 3 ans. Interventions rapides lors de nos 2 fuites réseau, astreinte efficace.",
     rating: 5,
+    photoIndex: 2,
   },
   {
     name: "Anne Simon",
     role: "Responsable HSE",
     company: "Groupe industriel — Île-de-France",
+    project: "4 sites · NF EN",
     content:
       "Partenaire pour la maintenance de 4 sites. Suivi rigoureux, rapports de vérification clairs, bonne connaissance des normes NF EN.",
     rating: 5,
+    photoIndex: 3,
   },
   {
     name: "Sébastien Girard",
     role: "Responsable Technique",
     company: "Immeuble tertiaire — Paris 15e",
+    project: "Modernisation · 2023",
     content:
       "Modernisation du poste de contrôle sprinkler et remplacement de vannes. Chantier propre, respect du planning annoncé.",
     rating: 5,
+    photoIndex: 4,
   },
 ];
 

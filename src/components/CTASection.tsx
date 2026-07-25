@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/data";
-import { realPhotos } from "@/lib/images";
+import { allRealPhotos } from "@/lib/images";
+import ScrollReveal from "@/components/ScrollReveal";
 
 interface CTASectionProps {
   title?: string;
@@ -22,11 +23,12 @@ export default function CTASection({
   return (
     <section className="section-padding section-dark">
       <div className="container-custom relative z-10">
+        <ScrollReveal>
         <div className="glass-panel relative overflow-hidden min-h-[320px] flex items-center">
           {showImage && (
             <>
               <Image
-                src={realPhotos.pumpRoomWide}
+                src={allRealPhotos[26]}
                 alt=""
                 fill
                 className="object-cover opacity-20"
@@ -62,6 +64,7 @@ export default function CTASection({
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </div>
     </section>
   );

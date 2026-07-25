@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import CertificationsBar from "@/components/CertificationsBar";
 import ServicesSection from "@/components/ServicesSection";
-import StatsStrip from "@/components/StatsStrip";
 import ProcessSection from "@/components/ProcessSection";
 import PhotoGallery from "@/components/PhotoGallery";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -16,7 +15,6 @@ export default function HomePage() {
       <Hero />
       <CertificationsBar />
       <ServicesSection />
-      <StatsStrip />
       <ProcessSection />
       <PhotoGallery />
       <FeaturesSection />
