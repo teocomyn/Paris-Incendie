@@ -233,6 +233,62 @@
       drop-shadow(0 0 18px rgba(252, 80, 0, 0.12));
   }
 
+  /* ─── Hero desktop mosaic ─── */
+  .hero-mosaic {
+    @apply relative w-full;
+    padding-bottom: 1.25rem;
+  }
+
+  .hero-mosaic-glow {
+    @apply absolute -inset-6 rounded-[2rem] pointer-events-none;
+    background: radial-gradient(ellipse 80% 70% at 55% 45%, rgba(252, 80, 0, 0.18), transparent 70%);
+    filter: blur(28px);
+  }
+
+  .hero-mosaic-grid {
+    @apply relative grid grid-cols-12 gap-3;
+    grid-template-rows: repeat(12, minmax(0, 1fr));
+    height: min(560px, 52vh);
+    min-height: 460px;
+  }
+
+  .hero-mosaic-tile {
+    @apply relative overflow-hidden rounded-2xl;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 16px 48px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .hero-mosaic-tile-main {
+    border-color: rgba(252, 80, 0, 0.28);
+    box-shadow:
+      0 20px 56px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(252, 80, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  }
+
+  .hero-mosaic-overlay {
+    @apply pointer-events-none absolute inset-0;
+    background: linear-gradient(
+      to top,
+      rgba(5, 5, 5, 0.72) 0%,
+      rgba(5, 5, 5, 0.15) 42%,
+      transparent 100%
+    );
+  }
+
+  .hero-mosaic-label {
+    @apply absolute bottom-3 left-3 z-[1] glass-pill px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-brand-300;
+  }
+
+  .hero-mosaic-badge {
+    @apply absolute -bottom-1 left-1/2 z-[2] flex -translate-x-1/2 items-center gap-3 rounded-2xl px-5 py-3;
+    box-shadow:
+      0 12px 40px rgba(252, 80, 0, 0.35),
+      0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+
   /* ─── Typography ─── */
   .section-label {
     @apply inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.25em] text-brand-500 mb-4;

@@ -165,24 +165,54 @@ export default function Hero() {
             </dl>
           </div>
 
-          <div className="relative h-[580px]">
-            <div className="absolute inset-0 bg-brand-500/5 blur-3xl rounded-2xl" />
+          <div className="hero-mosaic">
+            <div className="hero-mosaic-glow" aria-hidden="true" />
 
-            <div className="absolute top-0 right-0 w-[58%] aspect-[3/4] photo-frame border-brand-500/30 shadow-glow">
-              <Image src={mosaicPhotos[0]} alt="Tête sprinkler laiton" fill className="object-cover" priority sizes="320px" />
+            <div className="hero-mosaic-grid">
+              <div className="hero-mosaic-tile hero-mosaic-tile-main group col-span-7 row-span-12">
+                <Image
+                  src={mosaicPhotos[1]}
+                  alt="Salle des pompes sprinkler"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  sizes="360px"
+                />
+                <div className="hero-mosaic-overlay" />
+                <span className="hero-mosaic-label">Pompes & réseau</span>
+              </div>
+
+              <div className="hero-mosaic-tile group col-span-5 row-span-7 col-start-8">
+                <Image
+                  src={mosaicPhotos[0]}
+                  alt="Tête sprinkler laiton"
+                  fill
+                  className="object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.04]"
+                  priority
+                  sizes="280px"
+                />
+                <div className="hero-mosaic-overlay" />
+                <span className="hero-mosaic-label">Sprinkler SPK</span>
+              </div>
+
+              <div className="hero-mosaic-tile group col-span-5 row-span-5 col-start-8 row-start-8">
+                <Image
+                  src={mosaicPhotos[2]}
+                  alt="Poste d'alarme sprinkler"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  sizes="280px"
+                />
+                <div className="hero-mosaic-overlay" />
+                <span className="hero-mosaic-label">Alarme & contrôle</span>
+              </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-[52%] aspect-[4/3] photo-frame border-brand-500/20 shadow-glow-sm animate-float-slow">
-              <Image src={mosaicPhotos[1]} alt="Salle des pompes sprinkler" fill className="object-cover" sizes="300px" />
-            </div>
-
-            <div className="absolute top-[38%] left-[8%] w-[38%] aspect-square photo-frame border-2 border-navy-950 shadow-glow-sm">
-              <Image src={mosaicPhotos[2]} alt="Poste d'alarme sprinkler" fill className="object-cover" sizes="200px" />
-            </div>
-
-            <div className="absolute bottom-16 -right-4 glass-panel p-4 max-w-[210px] z-[2]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-brand-500 mb-1">Certifié</p>
-              <p className="font-sans font-bold text-lg text-white leading-tight">APSAD R4 & R5</p>
+            <div className="hero-mosaic-badge glass-flame">
+              <Shield className="h-4 w-4 shrink-0 opacity-90" />
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-white/90">Certifié APSAD</p>
+                <p className="font-sans font-bold text-base text-white leading-tight">R4 & R5</p>
+              </div>
             </div>
           </div>
         </div>
