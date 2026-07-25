@@ -14,9 +14,9 @@ const LOGO_ICON = "/logo-icon.png";
 
 const sizeClasses: Record<LogoVariant, string> = {
   icon: "h-9 w-9 sm:h-10 sm:w-10",
-  wordmark: "h-10 w-auto sm:h-11",
-  full: "h-11 w-auto sm:h-12 md:h-14",
-  "full-light": "h-11 w-auto sm:h-12 md:h-14",
+  wordmark: "h-11 w-auto sm:h-12",
+  full: "h-12 w-auto sm:h-[3.25rem] md:h-14",
+  "full-light": "h-12 w-auto sm:h-[3.25rem] md:h-14",
 };
 
 export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
@@ -24,9 +24,9 @@ export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
     <Image
       src={LOGO_ICON}
       alt=""
-      width={420}
-      height={420}
-      className={`${className} object-contain`}
+      width={257}
+      height={257}
+      className={`logo-brand ${className} object-contain`}
       priority
       sizes="40px"
     />
@@ -48,11 +48,11 @@ export default function Logo({
     <Image
       src={src}
       alt="Paris Incendie, Sprinkler Systems"
-      width={1024}
-      height={1024}
-      className={`object-contain ${className ?? defaultSize}`}
+      width={764}
+      height={430}
+      className={`logo-brand object-contain ${className ?? defaultSize}`}
       priority
-      sizes="(max-width: 640px) 120px, 160px"
+      sizes="(max-width: 640px) 140px, 200px"
     />
   );
 }

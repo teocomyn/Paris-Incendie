@@ -31,7 +31,7 @@ export default function Header() {
       <div className="container-custom relative z-[1]">
         <div className="flex h-[60px] md:h-[76px] items-center justify-between gap-3">
           <Link href="/" className="shrink-0 transition-opacity hover:opacity-90 flex items-center">
-            <Logo variant="full-light" className="h-10 w-auto sm:h-11 md:h-12" />
+            <Logo variant="full-light" className="h-12 w-auto sm:h-[3.25rem] md:h-14" />
           </Link>
 
           <nav className="hidden lg:flex items-center glass-pill px-1.5 py-1">
